@@ -9,7 +9,6 @@ Hololive = {
         "戌神ころね",
         "https://yt3.ggpht.com/ytc/AAUvwnimjdERaJDGopfH8UaB0r9tr_p8uyuEWWyYVkAd5Q=s88-c-k-c0x00ffffff-no-rj"
     ],
-    ...
     "UCCzUftO8KOVkV4wQG1vkUvg": [
         "宝鐘マリン",
         "https://yt3.ggpht.com/ytc/AAUvwnjPuFWs42Vx2yIhK7z1w4L-e1GIpHn_5R1uknbS=s88-c-k-c0x00ffffff-no-rj"
