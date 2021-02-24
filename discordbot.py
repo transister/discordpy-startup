@@ -40,7 +40,7 @@ webhook_url_Hololive = '配信開始チャンネル用のwebhookリンク' #ホ�
 webhook_url_Hololive_yotei = '配信開始予定用のwebhookリンク' #ホロライブ配信予定
 broadcast_data = {} #配信予定のデータを格納
 
-YOUTUBE_API_KEY = [複数のAPI(str型)をリストで管理]
+YOUTUBE_API_KEY = ["4/0AY0e-g4OLBvBxkga3H1P37QRwVCb8ex9WZ7tZ-_xJ37Hdfyu27oVr3vVVtAOd4YHBGt-Xw&scope=https://www.googleapis.com/auth/youtube"]
 
 def dataformat_for_python(at_time): #datetime型への変換
     at_year = int(at_time[0:4])
