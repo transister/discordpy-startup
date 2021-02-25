@@ -126,6 +126,9 @@ def post_broadcast_schedule(userId, videoId, starttime):
         "content": content #文章
     }
     requests.post(webhook_url_Hololive_yotei, main_content) #Discordに送信
+@bot.command()
+async def ping(ctx):
+    await ctx.send('pong')
 
 while True:
     now_time = datetime.now() + timedelta(hours=9)
