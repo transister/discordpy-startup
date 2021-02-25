@@ -134,7 +134,7 @@ def post_broadcast_schedule(userId, videoId, starttime):
     requests.post(webhook_url_Hololive_yotei, main_content) #Discordに送信
     
 # 起動時に動作する処理
-@client.event
+@.event
 async def on_ready():
     # 起動したらターミナルにログイン通知が表示される
     await ctx.send("起動しました")
