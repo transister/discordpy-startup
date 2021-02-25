@@ -32,7 +32,7 @@ Hololive = {
     "UCvzGlP9oQwU--Y0r9id_jnA": [
         "大空スバル",
         "https://yt3.ggpht.com/ytc/AAUvwniCgko15I_x5bYWm0G2vnf5hZqD5hLOtLEDw0Na=s88-c-k-c0x00ffffff-no-rj"
-    ]
+    ],
 } #配信者のチャンネルID, 配信者名, アイコン画像のURLのリスト
 
 webhook_url_Hololive = 'https://discord.com/api/webhooks/814455705607077928/7GHQbsP_NNHR9uZ78CzVmiQwyCajJEdRpqI8hRDD-yKy87evrNnkEmJDiIOCT2nLMjHn' #ホロライブ配信開始
@@ -130,7 +130,7 @@ def post_broadcast_schedule(userId, videoId, starttime):
 
 while True:
     now_time = datetime.now() + timedelta(hours=9)
-    if(((now_time.year > 2020) or ((now_time.year == 2020) and (now_time.month >= 6) and (now_time.day >= 22))) and (now_time.minute == 40) and (now_time.hour % 1 == 0)):
+    if((now_time.minute == 0) and (now_time.hour % 1 == 0)):
         get_information()
     check_schedule(now_time, broadcast_data)
     time.sleep(60)
