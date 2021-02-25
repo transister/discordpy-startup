@@ -3,7 +3,6 @@ from discord.ext import commands
 import os
 import traceback
 import time
-import requests
 import json
 import copy
 
