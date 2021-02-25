@@ -143,7 +143,7 @@ async def on_command_error(ctx, error):
 
 @bot.command()
 async def ping(ctx):
-    await ctx.send(broadcast_data[0]['starttime'])
+    await ctx.send(broadcast_data[0][0])
 
 bot.run(token)
 while True:
