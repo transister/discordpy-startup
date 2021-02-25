@@ -2,16 +2,11 @@
 from discord.ext import commands
 import os
 import traceback
-
 import time
 import requests
 import json
 import copy
 from datetime import datetime, timedelta, timezone
-
-
-bot = commands.Bot(command_prefix='/')
-token = os.environ['DISCORD_BOT_TOKEN']
 
 Hololive = {
     "UChAnqc_AY5_I3Px5dig3X1Q": [
@@ -49,6 +44,9 @@ webhook_url_Hololive_yotei = 'https://discord.com/api/webhooks/81445570560707792
 broadcast_data = {} #配信予定のデータを格納
 
 YOUTUBE_API_KEY = ["AIzaSyD1v807Gio9K4GVjKVjdRVgw0_kMip7z8Y","AIzaSyDYbIaTUq3yipQrOHncHhHjKDxVRZDZE5s","AIzaSyACZwmWNAyT5w2Spzm3_61Rw0GiH33utRU","AIzaSyDR5AhxSeIKsvIMJDqhsMTfh_fvo6DLR3o","AIzaSyCbmIAmPpKnLMrM2vEGg8MoqTyHgTVMAOM","AIzaSyDE9i7mg0ruYaISi8MPVH-tMd8LE4B_kNg","AIzaSyA2x_6iFWJHDlxjYAq4-ekMz9lHnlgZcAA"]
+
+bot = commands.Bot(command_prefix='/')
+token = os.environ['DISCORD_BOT_TOKEN']
 
 def dataformat_for_python(at_time): #datetime型への変換
     at_year = int(at_time[0:4])
@@ -147,7 +145,8 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
-    
+
+
 bot.run(token)
 while True:
     now_time = datetime.now() + timedelta(hours=9)
