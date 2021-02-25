@@ -106,8 +106,7 @@ def get_information():
 def check_schedule(now_time, broadcast_data):
     for bd in list(broadcast_data):
         try:
-            # RFC 3339形式 => datetime
-            sd_time = datetime.strptime(broadcast_data[bd]['starttime'], '%Y-%m-%dT%H:%M:%SZ') #配信スタート時間をdatetime型で保管
+            sd_time = dataformat_for_python(broadcast_data[bd]['starttime']) #配信スタート時間をdatetime型で保管
             sd_time += timedelta(hours=9)
             if(now_time >= sd_time):#今の方が配信開始時刻よりも後だったら
                 post_to_discord(broadcast_data[bd]['channelId'], bd) #ツイート
