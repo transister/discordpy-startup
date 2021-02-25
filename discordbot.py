@@ -138,7 +138,7 @@ def post_broadcast_schedule(userId, videoId, starttime):
 async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
-    await ctx.send("エラー" & error_msg)
+    await ctx.send(error_msg)
     
 @bot.command()
 async def ping(ctx):
