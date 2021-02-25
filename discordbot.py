@@ -137,7 +137,7 @@ def post_broadcast_schedule(userId, videoId, starttime):
 @bot.event
 async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
-    error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
+    error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format()) + "エラー\n"
     await ctx.send(error_msg)
     
 @bot.command()
@@ -148,7 +148,7 @@ now_time = datetime.now() + timedelta(hours=9)
 if((now_time.minute == 5) and (now_time.hour % 1 == 0)):
     get_information()
 check_schedule(now_time, broadcast_data)
-time.sleep(60)
+time.sleep(0)
 bot.run(token)
 
 
