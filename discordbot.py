@@ -139,6 +139,15 @@ async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
+    
+# 起動時に動作する処理
+@client.event
+async def on_ready():
+    # 起動したらターミナルにログイン通知が表示される
+    print('ログインしました')
+    await ctx.send("起動しました")
+    get_information()
+    check_schedule(now_time, broadcast_data)
 
 
 @bot.command()
