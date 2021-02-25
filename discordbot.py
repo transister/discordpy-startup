@@ -137,8 +137,10 @@ def post_broadcast_schedule(userId, videoId, starttime):
 @bot.event
 async def on_ready():
     # 起動したらターミナルにログイン通知が表示される
-    await ctx.send("起動しました")
-
+    now_time = datetime.now() + timedelta(hours=9)
+    get_information()
+    check_schedule(now_time, broadcast_data)
+    
 @bot.event
 async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
@@ -150,7 +152,7 @@ async def ping(ctx):
     await ctx.send("pong\n")
     
 now_time = datetime.now() + timedelta(hours=9)
-if((now_time.minute == 5) and (now_time.hour % 1 == 0)):
+if((now_time.minute == 30) and (now_time.hour % 1 == 0)):
     get_information()
 check_schedule(now_time, broadcast_data)
 time.sleep(0)
