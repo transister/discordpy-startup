@@ -145,8 +145,6 @@ async def on_command_error(ctx, error):
 async def on_ready():
     # 起動したらターミナルにログイン通知が表示される
     await ctx.send("起動しました")
-    get_information()
-    check_schedule(now_time, broadcast_data)
 
 
 @bot.command()
