@@ -147,7 +147,7 @@ async def on_command_error(ctx, error):
     
 @bot.command()
 async def ping(ctx):
-    await ctx.send(broadcast_data[0][0])
+    await ctx.send("pong\n")
     
 now_time = datetime.now() + timedelta(hours=9)
 if((now_time.minute == 5) and (now_time.hour % 1 == 0)):
