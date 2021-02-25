@@ -148,7 +148,7 @@ async def ping(ctx):
 bot.run(token)
 while True:
     now_time = datetime.now() + timedelta(hours=9)
-    if((now_time.minute == 0) and (now_time.hour % 1 == 0)):
+    if((now_time.minute == 5) and (now_time.hour % 1 == 0)):
         get_information()
     check_schedule(now_time, broadcast_data)
     time.sleep(60)
