@@ -144,7 +144,6 @@ async def on_command_error(ctx, error):
 @client.event
 async def on_ready():
     # 起動したらターミナルにログイン通知が表示される
-    print('ログインしました')
     await ctx.send("起動しました")
     get_information()
     check_schedule(now_time, broadcast_data)
