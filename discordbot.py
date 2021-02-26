@@ -83,7 +83,7 @@ def post_to_discord(userId, videoId):
     broadcast_data.pop(videoId)
 
 @tasks.loop(seconds=180)
-def get_information():
+async def get_information():
     tmp = copy.copy(broadcast_data)
     api_now = 0 #現在どのYouTube APIを使っているかを記録
     for idol in Hololive:
