@@ -150,13 +150,16 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ping(ctx):
     await ctx.send("pong\n")
-    
-now_time = datetime.now() + timedelta(hours=9)
-if((now_time.minute == 0) and (now_time.hour % 2 == 1)):
-    get_information()
-check_schedule(now_time, broadcast_data)
-time.sleep(60)
-bot.run(token)
+
+bot.run(token)  
+while True:
+    now_time = datetime.now() + timedelta(hours=9)
+    if((now_time.minute == 0) and (now_time.hour % 2 == 0)):
+        get_information()
+    check_schedule(now_time, broadcast_data)
+    await ctx.send("loading\n")
+    time.sleep(60)
+
 
 
 
