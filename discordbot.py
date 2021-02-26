@@ -113,7 +113,7 @@ async def get_information():
             except KeyError:
                 continue
 
-def check_schedule(now_time, broadcast_data):
+def check_schedule(now_time):
     for bd in list(broadcast_data):
         try:
             sd_time = dataformat_for_python(broadcast_data[bd]['starttime']) #配信スタート時間をdatetime型で保管
@@ -142,7 +142,7 @@ async def on_ready():
     # 起動したらターミナルにログイン通知が表示される
     now_time = datetime.now() + timedelta(hours=9)
     get_information.start()
-    check_schedule(now_time, broadcast_data)
+    check_schedule(now_time)
     
 @bot.event
 async def on_command_error(ctx, error):
