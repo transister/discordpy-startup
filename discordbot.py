@@ -82,7 +82,7 @@ def post_to_discord(userId, videoId):
     requests.post(webhook_url_Hololive, main_content) #Discordに送信
     broadcast_data.pop(videoId)
     
-@tasks.loop(minutes=120)
+@tasks.loop(minutes=60)
 def get_information():
     tmp = copy.copy(broadcast_data)
     api_now = 0 #現在どのYouTube APIを使っているかを記録
