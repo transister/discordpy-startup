@@ -137,8 +137,7 @@ def post_broadcast_schedule(userId, videoId, starttime):
 @bot.event
 async def on_ready():
     # 起動したらターミナルにログイン通知が表示される
-    await bot.login(token,bot = true)
-    await bot.connect(reconnect=true)
+    await bot.start(token)
     now_time = datetime.now() + timedelta(hours=9)
     get_information()
     check_schedule(now_time, broadcast_data)
