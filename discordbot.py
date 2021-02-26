@@ -153,14 +153,12 @@ async def ping(ctx):
     await ctx.send("pong\n")
 
 
- 
+await bot.start(token)
 while True:
     now_time = datetime.now() + timedelta(hours=9)
     if((now_time.minute == 0) and (now_time.hour % 2 == 0)):
         get_information()
     check_schedule(now_time, broadcast_data)
-    await ctx.send("loading\n")
-    await bot.start(token)
     time.sleep(60)
 
 
