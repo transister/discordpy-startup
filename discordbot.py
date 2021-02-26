@@ -81,7 +81,8 @@ def post_to_discord(userId, videoId):
     }
     requests.post(webhook_url_Hololive, main_content) #Discordに送信
     broadcast_data.pop(videoId)
-    
+
+@tasks.loop(seconds=180)
 def get_information():
     tmp = copy.copy(broadcast_data)
     api_now = 0 #現在どのYouTube APIを使っているかを記録
@@ -111,7 +112,7 @@ def get_information():
                 post_broadcast_schedule(broadcast_data[vi]['channelId'], vi, broadcast_data[vi]['starttime'])
             except KeyError:
                 continue
-                
+
 def check_schedule(now_time, broadcast_data):
     for bd in list(broadcast_data):
         try:
@@ -140,7 +141,7 @@ def post_broadcast_schedule(userId, videoId, starttime):
 async def on_ready():
     # 起動したらターミナルにログイン通知が表示される
     now_time = datetime.now() + timedelta(hours=9)
-    get_information()
+    get_information.start()
     check_schedule(now_time, broadcast_data)
     
 @bot.event
