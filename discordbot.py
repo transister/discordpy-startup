@@ -41,8 +41,8 @@ Hololive = {
     ],
 } #配信者のチャンネルID, 配信者名, アイコン画像のURLのリスト
 
-webhook_url_Hololive = 'https://discord.com/api/webhooks/814627315048906802/mast3_S-vt3V0R_fwVhzgrKmWD3H4fYAD9XZQiTuSWKFEupE2aRou24yWiYM6Jtksdjd' #ホロライブ配信開始
-webhook_url_Hololive_yotei = 'https://discord.com/api/webhooks/814626994296979456/IisxTTZqQXTvM569Z4TVFYSEqdxEriwt_M9XX_IEEiDsNNqG991tyZr94VOOfjAsBpeJ' #ホロライブ配信予定
+webhook_url_Hololive = 'https://discord.com/api/webhooks/814455705607077928/7GHQbsP_NNHR9uZ78CzVmiQwyCajJEdRpqI8hRDD-yKy87evrNnkEmJDiIOCT2nLMjHn' #ホロライブ配信開始
+webhook_url_Hololive_yotei = 'https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j' #ホロライブ配信予定
 broadcast_data = {} #配信予定のデータを格納
 
 YOUTUBE_API_KEY = ["AIzaSyD1v807Gio9K4GVjKVjdRVgw0_kMip7z8Y","AIzaSyDYbIaTUq3yipQrOHncHhHjKDxVRZDZE5s","AIzaSyACZwmWNAyT5w2Spzm3_61Rw0GiH33utRU","AIzaSyDR5AhxSeIKsvIMJDqhsMTfh_fvo6DLR3o","AIzaSyCbmIAmPpKnLMrM2vEGg8MoqTyHgTVMAOM","AIzaSyDE9i7mg0ruYaISi8MPVH-tMd8LE4B_kNg","AIzaSyA2x_6iFWJHDlxjYAq4-ekMz9lHnlgZcAA"]
