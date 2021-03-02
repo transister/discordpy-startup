@@ -85,7 +85,6 @@ def post_to_discord(userId, videoId):
 
 @tasks.loop(hours=1)
 async def get_information():
-    
     tmp = copy.copy(broadcast_data)
     api_now = 0 #現在どのYouTube APIを使っているかを記録
     for idol in Hololive:
@@ -122,7 +121,7 @@ async def check_schedule():
         try:
             sd_time = datetime.strptime(broadcast_data[bd]['starttime'], '%Y-%m-%dT%H:%M:%SZ') #配信スタート時間をdatetime型で保管
             sd_time += timedelta(hours=9)
-            if(now_time >= sd_time):#今の方が配信開始時刻よりも後だったら
+            if((sd_time + timedelta(minutes=2)) >= now_time >= sd_time):#今の方が配信開始時刻よりも後だったら
                 post_to_discord(broadcast_data[bd]['channelId'], bd) #ツイート
         except KeyError:
             continue
