@@ -87,7 +87,6 @@ def post_to_discord(userId, videoId):
 async def get_information():
     tmp = copy.copy(broadcast_data)
     broadcast_data = {} 
-    
     api_now = 0 #現在どのYouTube APIを使っているかを記録
     for idol in Hololive:
         api_link = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=" + idol + "&key=" + YOUTUBE_API_KEY[api_now] + "&eventType=upcoming&type=video"
