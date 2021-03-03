@@ -106,12 +106,11 @@ async def get_information():
                     broadcast_data[video]['starttime'] = vd['items'][0]['liveStreamingDetails']['scheduledStartTime']
         except KeyError: #配信予定がなくて403が出た
             continue
-    for vi in broadcast_data:
+    for vi in list(broadcast_data):
         if(not(vi in tmp)):
             print(broadcast_data[vi])
             try:
                 post_broadcast_schedule(broadcast_data[vi]['channelId'], vi, broadcast_data[vi]['starttime'])
-                requests.post(webhook_url_Hololive_yotei, broadcast_data[vi]['starttime'])
             except KeyError:
                 continue
 
