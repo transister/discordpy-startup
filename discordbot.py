@@ -111,8 +111,6 @@ async def get_information():
         if(not(vi in tmp)):
             print(broadcast_data[vi])
             try:
-                sd_time = dataformat_for_pyton(broadcast_data[vi]['starttime']) #配信スタート時間をdatetime型で保管
-                sd_time += timedelta(hours=9)
                 if(now_time = now_time):#今の方が配信開始時刻よりも先だったら
                     post_broadcast_schedule(broadcast_data[vi]['channelId'], vi, broadcast_data[vi]['starttime'])
             except KeyError:
