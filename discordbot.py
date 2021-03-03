@@ -107,10 +107,10 @@ async def get_information():
         except KeyError: #配信予定がなくて403が出た
             continue
     for vi in broadcast_data:
+        now_time = datetime.now() + timedelta(hours=9)
         if(not(vi in tmp)):
             print(broadcast_data[vi])
             try:
-                now_time = datetime.now() + timedelta(hours=9)
                 sd_time = datetime.strptime(broadcast_data[vi]['starttime'], '%Y-%m-%dT%H:%M:%SZ') #配信スタート時間をdatetime型で保管
                 sd_time += timedelta(hours=9)
                 if(now_time < sd_time):#今の方が配信開始時刻よりも先だったら
