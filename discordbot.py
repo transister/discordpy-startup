@@ -39,6 +39,10 @@ Hololive = {
         "大空スバル",
         "https://yt3.ggpht.com/ytc/AAUvwniCgko15I_x5bYWm0G2vnf5hZqD5hLOtLEDw0Na=s88-c-k-c0x00ffffff-no-rj"
     ],
+    "UCQ0UDLQCjY0rmuxCDE38FGg": [
+        "夏色まつり",
+        "https://yt3.ggpht.com/ytc/AAUvwni8cjtyc08E7rocvO9_gR1b5BhO1O6O1VreDxMW=s176-c-k-c0x00ffffff-no-rj"
+    ],
 } #配信者のチャンネルID, 配信者名, アイコン画像のURLのリスト
 
 webhook_url_Hololive = 'https://discord.com/api/webhooks/814627315048906802/mast3_S-vt3V0R_fwVhzgrKmWD3H4fYAD9XZQiTuSWKFEupE2aRou24yWiYM6Jtksdjd' #ホロライブ配信開始
