@@ -111,6 +111,7 @@ async def get_information():
             print(broadcast_data[vi])
             try:
                 post_broadcast_schedule(broadcast_data[vi]['channelId'], vi, broadcast_data[vi]['starttime'])
+                requests.post(webhook_url_Hololive_yotei, broadcast_data[vi]['starttime'])
             except KeyError:
                 continue
 
