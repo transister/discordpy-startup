@@ -87,7 +87,6 @@ def post_to_discord(userId, videoId):
 async def get_information():
     tmp = copy.copy(broadcast_data)
     api_now = 0 #現在どのYouTube APIを使っているかを記録
-    now_time = datetime.now() + timedelta(hours=9)
     for idol in Hololive:
         api_link = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=" + idol + "&key=" + YOUTUBE_API_KEY[api_now] + "&eventType=upcoming&type=video"
         api_now = (api_now + 1) % len(YOUTUBE_API_KEY) #apiを1つずらす
@@ -111,8 +110,7 @@ async def get_information():
         if(not(vi in tmp)):
             print(broadcast_data[vi])
             try:
-                if(now_time = now_time):#今の方が配信開始時刻よりも先だったら
-                    post_broadcast_schedule(broadcast_data[vi]['channelId'], vi, broadcast_data[vi]['starttime'])
+                post_broadcast_schedule(broadcast_data[vi]['channelId'], vi, broadcast_data[vi]['starttime'])
             except KeyError:
                 continue
 
