@@ -107,6 +107,7 @@ async def get_information():
     for idol in Hololive:
         api_link = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=" + idol + "&key=" + YOUTUBE_API_KEY[api_now] + "&eventType=upcoming&type=video"
         api_now = (api_now + 1) % len(YOUTUBE_API_KEY) #apiを1つずらす
+        time.sleep(1)
         aaa = requests.get(api_link)
         v_data = json.loads(aaa.text)
         try:
@@ -163,6 +164,8 @@ def post_broadcast_schedule(userId, videoId, starttime):
 @bot.event
 async def on_ready():
     # 起動したらターミナルにログイン通知が表示される
+    broadcast_data = {} #配信予定のデータを格納
+    tmp = {}
     get_information.start()
     time.sleep(60)
     check_schedule.start()
