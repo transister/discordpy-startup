@@ -106,7 +106,9 @@ async def get_information():
     api_now = 0 #現在どのYouTube APIを使っているかを記録
     for idol in Hololive:
         api_link = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=" + idol + "&key=" + YOUTUBE_API_KEY[api_now] + "&eventType=upcoming&type=video"
-        api_now = (api_now + 1) % len(YOUTUBE_API_KEY) #apiを1つずらす
+        api_now = (api_now + 1)  #apiを1つずらす
+            if ( api_now >= len(YOUTUBE_API_KEY)):
+                api_now = 0
         aaa = requests.get(api_link)
         time.sleep(1)
         v_data = json.loads(aaa.text)
@@ -119,7 +121,9 @@ async def get_information():
                 except KeyError:#なかったら
                     aaaa = requests.get("https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&id=" + video + "&key=" + YOUTUBE_API_KEY[api_now])
                     time.sleep(1)
-                    api_now = (api_now + 1) % len(YOUTUBE_API_KEY) #apiを1つずらす
+                    api_now = (api_now + 1) #apiを1つずらす
+                        if ( api_now >= len(YOUTUBE_API_KEY)):
+                            api_now = 0
                     vd = json.loads(aaaa.text)
                     print(vd)
                     broadcast_data[video]['starttime'] = vd['items'][0]['liveStreamingDetails']['scheduledStartTime']
