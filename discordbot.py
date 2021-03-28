@@ -56,13 +56,12 @@ Hololive = {
         "https://yt3.ggpht.com/ytc/AAUvwnhSyw72yPqDbQMSNN6RBJ0nAHa7wmMl-5etY8Bs=s88-c-k-c0x00ffffff-no-rj"
     ],
 } #配信者のチャンネルID, 配信者名, アイコン画像のURLのリスト
-
 webhook_url_Hololive = 'https://discord.com/api/webhooks/814627315048906802/mast3_S-vt3V0R_fwVhzgrKmWD3H4fYAD9XZQiTuSWKFEupE2aRou24yWiYM6Jtksdjd' #ホロライブ配信開始
 webhook_url_Hololive_yotei = 'https://discord.com/api/webhooks/814626994296979456/IisxTTZqQXTvM569Z4TVFYSEqdxEriwt_M9XX_IEEiDsNNqG991tyZr94VOOfjAsBpeJ' #ホロライブ配信予定
 broadcast_data = {} #配信予定のデータを格納
 tmp = {}
 
-YOUTUBE_API_KEY = ["AIzaSyD1v807Gio9K4GVjKVjdRVgw0_kMip7z8Y","AIzaSyDYbIaTUq3yipQrOHncHhHjKDxVRZDZE5s","AIzaSyACZwmWNAyT5w2Spzm3_61Rw0GiH33utRU","AIzaSyDR5AhxSeIKsvIMJDqhsMTfh_fvo6DLR3o","AIzaSyCbmIAmPpKnLMrM2vEGg8MoqTyHgTVMAOM","AIzaSyDE9i7mg0ruYaISi8MPVH-tMd8LE4B_kNg","AIzaSyA2x_6iFWJHDlxjYAq4-ekMz9lHnlgZcAA","AIzaSyA2x_6iFWJHDlxjYAq4-ekMz9lHnlgZcAA","AIzaSyA2x_6iFWJHDlxjYAq4-ekMz9lHnlgZcAA","AIzaSyA2x_6iFWJHDlxjYAq4-ekMz9lHnlgZcAA"]
+YOUTUBE_API_KEY = ["AIzaSyD1v807Gio9K4GVjKVjdRVgw0_kMip7z8Y","AIzaSyDYbIaTUq3yipQrOHncHhHjKDxVRZDZE5s","AIzaSyACZwmWNAyT5w2Spzm3_61Rw0GiH33utRU","AIzaSyDR5AhxSeIKsvIMJDqhsMTfh_fvo6DLR3o","AIzaSyCbmIAmPpKnLMrM2vEGg8MoqTyHgTVMAOM","AIzaSyDE9i7mg0ruYaISi8MPVH-tMd8LE4B_kNg","AIzaSyDi-PwXFxb9XuQN-SvSWc9fO0vMdWzCaAI","AIzaSyCqydt1Dlwdx-J9FVt8GGWjEJKtj_zYe9I","AIzaSyAxSNNHLlW8S4t4t52azdYaXsUc2Y5nxG0"]
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
