@@ -97,10 +97,10 @@ async def get_information():
     for idol in Hololive:
         api_link = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=" + idol + "&key=" + YOUTUBE_API_KEY[api_now] + "&eventType=upcoming&type=video"
         api_now = (api_now + 1)  #apiを1つずらす
-        if(api_now >= 9):
+        if(api_now >= 10):
             api_now = 0
         aaa = requests.get(api_link)
-        time.sleep(5)
+        time.sleep(1)
         v_data = json.loads(aaa.text)
         try:
             for item in v_data['items']:#各配信予定動画データに関して
@@ -110,9 +110,9 @@ async def get_information():
                     a = broadcast_data[video]['starttime'] #既にbroadcast_dataにstarttimeがあるかチェック
                 except KeyError:#なかったら
                     aaaa = requests.get("https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&id=" + video + "&key=" + YOUTUBE_API_KEY[api_now])
-                    time.sleep(5)
+                    time.sleep(1)
                     api_now = (api_now + 1) #apiを1つずらす
-                    if(api_now >= 9):
+                    if(api_now >= 10):
                         api_now = 0
                     vd = json.loads(aaaa.text)
                     print(vd)
@@ -162,9 +162,9 @@ async def on_ready():
     # 起動したらターミナルにログイン通知が表示される
     broadcast_data = {} #配信予定のデータを格納
     tmp = {}
-    #get_information.start()
-    #time.sleep(120)
-    #check_schedule.start()
+    get_information.start()
+    time.sleep(120)
+    check_schedule.start()
     
 @bot.event
 async def on_command_error(ctx, error):
