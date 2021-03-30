@@ -171,8 +171,8 @@ async def on_ready():
     broadcast_data = {} #配信予定のデータを格納
     tmp = {}
     get_information.start()
-    time.sleep(120)
-    check_schedule.start()
+    #time.sleep(120)
+    #check_schedule.start()
     
 @bot.event
 async def on_command_error(ctx, error):
