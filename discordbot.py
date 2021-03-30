@@ -170,7 +170,7 @@ async def on_ready():
     # 起動したらターミナルにログイン通知が表示される
     broadcast_data = {} #配信予定のデータを格納
     tmp = {}
-    get_information.start()
+    #get_information.start()
     #time.sleep(120)
     #check_schedule.start()
     
