@@ -66,15 +66,6 @@ YOUTUBE_API_KEY = ["AIzaSyD1v807Gio9K4GVjKVjdRVgw0_kMip7z8Y","AIzaSyDYbIaTUq3yip
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
-def dataformat_for_python(at_time): #datetime型への変換
-    at_year = int(at_time[0:4])
-    at_month = int(at_time[5:7])
-    at_day = int(at_time[8:10])
-    at_hour = int(at_time[11:13])
-    at_minute = int(at_time[14:16])
-    at_second = int(at_time[17:19])
-    return datetime(at_year, at_month, at_day, at_hour, at_minute, at_second)
-
 def replace_JST(s):
     a = s.split("-")
     u = a[2].split(" ")
