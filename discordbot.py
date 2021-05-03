@@ -67,8 +67,10 @@ Streamer = {
         "VOMS"
     ],
 } #配信者のチャンネルID, 配信者名, アイコン画像のURLのリスト
-webhook_url = 'https://discord.com/api/webhooks/814627315048906802/mast3_S-vt3V0R_fwVhzgrKmWD3H4fYAD9XZQiTuSWKFEupE2aRou24yWiYM6Jtksdjd' #ホロライブ配信開始
-webhook_url_yotei = 'https://discord.com/api/webhooks/814626994296979456/IisxTTZqQXTvM569Z4TVFYSEqdxEriwt_M9XX_IEEiDsNNqG991tyZr94VOOfjAsBpeJ' #ホロライブ配信予定
+webhook_url = "https://discord.com/api/webhooks/814627315048906802/mast3_S-vt3V0R_fwVhzgrKmWD3H4fYAD9XZQiTuSWKFEupE2aRou24yWiYM6Jtksdjd" #配信開始
+webhook_url_yotei = {"Hololive": ['https://discord.com/api/webhooks/814626994296979456/IisxTTZqQXTvM569Z4TVFYSEqdxEriwt_M9XX_IEEiDsNNqG991tyZr94VOOfjAsBpeJ'],
+                     "VOMS": ['https://discord.com/api/webhooks/838761972651655208/Kf3CGJ4ILSOgnQSm-gSEvtck2-Ug7clLCoQNr5HANyELXjxgffAseMr_j9qjiMxmvi0S']
+                    }#配信予定
 broadcast_data = {} #配信予定のデータを格納
 tmp = {}
 
@@ -158,13 +160,13 @@ def post_broadcast_schedule(userId, videoId, starttime):
     sst = st.replace('Z', '')
     ssst = replace_JST(sst)
     haishin_url = "https://www.youtube.com/watch?v=" + videoId #配信URL
-    content = ssst + "に配信予定！\n" + haishin_url #Discordに投稿される文章
+    content = ssst + "に配信予定\n" + haishin_url #Discordに投稿される文章
     main_content = {
         "username": Streamer[userId][0], #配信者名
         "avatar_url": Streamer[userId][1], #アイコン
         "content": content #文章
     }
-    requests.post(webhook_url_yotei, main_content) #Discordに送信
+    requests.post(webhook_url_yotei[Streamer[userId][2]][0], main_content) #Discordに送信
     
 
 # 起動時に動作する処理
