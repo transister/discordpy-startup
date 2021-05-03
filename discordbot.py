@@ -125,7 +125,7 @@ async def get_information():
             try:
                 sd_time = datetime.strptime(broadcast_data[vi]['starttime'], '%Y-%m-%dT%H:%M:%SZ') #配信スタート時間をdatetime型で保管
                 sd_time += timedelta(hours=9)
-                if((now_time < sd_time) and (now_time + timedelta(days=180) < sd_time)):
+                if((now_time < sd_time) and ((now_time + timedelta(days=180)) < sd_time)):
                     post_broadcast_schedule(broadcast_data[vi]['channelId'], vi, broadcast_data[vi]['starttime'])
             except KeyError:
                 continue
