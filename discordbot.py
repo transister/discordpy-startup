@@ -10,54 +10,65 @@ import json
 import copy
 from datetime import datetime, timedelta, timezone
 
-Hololive = {
+Streamer = {
     "UChAnqc_AY5_I3Px5dig3X1Q": [
         "戌神ころね",
-        "https://yt3.ggpht.com/ytc/AAUvwnimjdERaJDGopfH8UaB0r9tr_p8uyuEWWyYVkAd5Q=s88-c-k-c0x00ffffff-no-rj"
+        "https://yt3.ggpht.com/ytc/AAUvwnimjdERaJDGopfH8UaB0r9tr_p8uyuEWWyYVkAd5Q=s88-c-k-c0x00ffffff-no-rj",
+        "Hololive"
     ],
     "UCCzUftO8KOVkV4wQG1vkUvg": [
         "宝鐘マリン",
-        "https://yt3.ggpht.com/ytc/AAUvwnjPuFWs42Vx2yIhK7z1w4L-e1GIpHn_5R1uknbS=s88-c-k-c0x00ffffff-no-rj"
+        "https://yt3.ggpht.com/ytc/AAUvwnjPuFWs42Vx2yIhK7z1w4L-e1GIpHn_5R1uknbS=s88-c-k-c0x00ffffff-no-rj",
+        "Hololive"
     ],
     "UC1DCedRgGHBdm81E1llLhOQ": [
         "兎田ぺこら",
-        "https://yt3.ggpht.com/ytc/AAUvwnjvkyPGzOmEXZ34mEFPlwMKTbCDl1ZkQ_HkxY-O5Q=s88-c-k-c0x00ffffff-no-rj"
+        "https://yt3.ggpht.com/ytc/AAUvwnjvkyPGzOmEXZ34mEFPlwMKTbCDl1ZkQ_HkxY-O5Q=s88-c-k-c0x00ffffff-no-rj",
+        "Hololive"
     ],
     "UC5CwaMl1eIgY8h02uZw7u8A": [
         "星街すいせい",
-        "https://yt3.ggpht.com/ytc/AAUvwnjdAl5rn3IjWzl55_0-skvKced7znPZRuPC5xLB=s88-c-k-c0x00ffffff-no-rj"
+        "https://yt3.ggpht.com/ytc/AAUvwnjdAl5rn3IjWzl55_0-skvKced7znPZRuPC5xLB=s88-c-k-c0x00ffffff-no-rj",
+        "Hololive"
     ],
     "UCdn5BQ06XqgXoAxIhbqw5Rg": [
         "白上フブキ",
-        "https://yt3.ggpht.com/ytc/AAUvwniEQsukDZoC-l8zchhRzpraxcH7Fyq9amrj2980Aw=s88-c-k-c0x00ffffff-no-rj"
+        "https://yt3.ggpht.com/ytc/AAUvwniEQsukDZoC-l8zchhRzpraxcH7Fyq9amrj2980Aw=s88-c-k-c0x00ffffff-no-rj",
+        "Hololive"
     ],
     "UC1opHUrw8rvnsadT-iGp7Cg": [
         "湊あくあ",
-        "https://yt3.ggpht.com/ytc/AAUvwngM9Jmc29dvbOY43w7RWFbOZLU4tGtOkEwtt-g7PA=s88-c-k-c0x00ffffff-no-rj"
+        "https://yt3.ggpht.com/ytc/AAUvwngM9Jmc29dvbOY43w7RWFbOZLU4tGtOkEwtt-g7PA=s88-c-k-c0x00ffffff-no-rj",
+        "Hololive"
     ],
     "UCvzGlP9oQwU--Y0r9id_jnA": [
         "大空スバル",
-        "https://yt3.ggpht.com/ytc/AAUvwniCgko15I_x5bYWm0G2vnf5hZqD5hLOtLEDw0Na=s88-c-k-c0x00ffffff-no-rj"
+        "https://yt3.ggpht.com/ytc/AAUvwniCgko15I_x5bYWm0G2vnf5hZqD5hLOtLEDw0Na=s88-c-k-c0x00ffffff-no-rj",
+        "Hololive"
     ],
     "UCQ0UDLQCjY0rmuxCDE38FGg": [
         "夏色まつり",
-        "https://yt3.ggpht.com/ytc/AAUvwni8cjtyc08E7rocvO9_gR1b5BhO1O6O1VreDxMW=s176-c-k-c0x00ffffff-no-rj"
+        "https://yt3.ggpht.com/ytc/AAUvwni8cjtyc08E7rocvO9_gR1b5BhO1O6O1VreDxMW=s176-c-k-c0x00ffffff-no-rj",
+        "Hololive"
     ],
     "UCdyqAaZDKHXg4Ahi7VENThQ": [
         "白銀ノエル",
-        "https://yt3.ggpht.com/ytc/AAUvwnijLF2X1YBVQo3rClt7ub29cYM7OzpmRmliaGbw=s88-c-k-c0x00ffffff-no-rj"
+        "https://yt3.ggpht.com/ytc/AAUvwnijLF2X1YBVQo3rClt7ub29cYM7OzpmRmliaGbw=s88-c-k-c0x00ffffff-no-rj",
+        "Hololive"
     ],
     "UCajhBT4nMrg3DLS-bLL2RCg": [
         "天野ピカミィ",
-        "https://yt3.ggpht.com/ytc/AAUvwnjfPSGerlUwIcpujHs9De6IZYRuH_H2v1heW48b=s88-c-k-c0x00ffffff-no-rj"
+        "https://yt3.ggpht.com/ytc/AAUvwnjfPSGerlUwIcpujHs9De6IZYRuH_H2v1heW48b=s88-c-k-c0x00ffffff-no-rj",
+        "VOMS"
     ],
     "UC3vzVK_N_SUVKqbX69L_X4g": [
         "緋笠トモシカ",
-        "https://yt3.ggpht.com/ytc/AAUvwnhSyw72yPqDbQMSNN6RBJ0nAHa7wmMl-5etY8Bs=s88-c-k-c0x00ffffff-no-rj"
+        "https://yt3.ggpht.com/ytc/AAUvwnhSyw72yPqDbQMSNN6RBJ0nAHa7wmMl-5etY8Bs=s88-c-k-c0x00ffffff-no-rj",
+        "VOMS"
     ],
 } #配信者のチャンネルID, 配信者名, アイコン画像のURLのリスト
-webhook_url_Hololive = 'https://discord.com/api/webhooks/814627315048906802/mast3_S-vt3V0R_fwVhzgrKmWD3H4fYAD9XZQiTuSWKFEupE2aRou24yWiYM6Jtksdjd' #ホロライブ配信開始
-webhook_url_Hololive_yotei = 'https://discord.com/api/webhooks/814626994296979456/IisxTTZqQXTvM569Z4TVFYSEqdxEriwt_M9XX_IEEiDsNNqG991tyZr94VOOfjAsBpeJ' #ホロライブ配信予定
+webhook_url = 'https://discord.com/api/webhooks/814627315048906802/mast3_S-vt3V0R_fwVhzgrKmWD3H4fYAD9XZQiTuSWKFEupE2aRou24yWiYM6Jtksdjd' #ホロライブ配信開始
+webhook_url_yotei = 'https://discord.com/api/webhooks/814626994296979456/IisxTTZqQXTvM569Z4TVFYSEqdxEriwt_M9XX_IEEiDsNNqG991tyZr94VOOfjAsBpeJ' #ホロライブ配信予定
 broadcast_data = {} #配信予定のデータを格納
 tmp = {}
 
@@ -76,25 +87,14 @@ def replace_JST(s):
       time[3] = time[3] + 9 - 24
     else:
       time[3] += 9
-    return (str(time[0]) + "/" + str(time[1]).zfill(2) + "/" + str(time[2]).zfill(2) + " " + str(time[3]).zfill(2) + "-" + str(time[4]).zfill(2) + "-" + str(time[5]).zfill(2))
-
-def post_to_discord(userId, videoId):
-    haishin_url = "https://www.youtube.com/watch?v=" + videoId #配信URL
-    content = "配信中！\n" + haishin_url #Discordに投稿される文章
-    main_content = {
-        "username": Hololive[userId][0], #配信者名
-        "avatar_url": Hololive[userId][1], #アイコン
-        "content": content #文章
-    }
-    requests.post(webhook_url_Hololive, main_content) #Discordに送信
-    broadcast_data.pop(videoId)
+    return (str(time[0]) + "/" + str(time[1]).zfill(2) + "/" + str(time[2]).zfill(2) + " " + str(time[3]).zfill(2) + ":" + str(time[4]).zfill(2))
 
 @tasks.loop(hours=1)
 async def get_information():
     tmp = copy.copy(broadcast_data)
     now_time = datetime.now() + timedelta(hours=9)
     api_now = 0 #現在どのYouTube APIを使っているかを記録
-    for idol in Hololive:
+    for idol in Streamer:
         api_link = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=" + idol + "&key=" + YOUTUBE_API_KEY[api_now] + "&eventType=upcoming&type=video"
         api_now = (api_now + 1)  #apiを1つずらす
         if(api_now >= 10):
@@ -125,7 +125,7 @@ async def get_information():
             try:
                 sd_time = datetime.strptime(broadcast_data[vi]['starttime'], '%Y-%m-%dT%H:%M:%SZ') #配信スタート時間をdatetime型で保管
                 sd_time += timedelta(hours=9)
-                if(now_time < sd_time):
+                if((now_time < sd_time) and (now_time + timedelta(days=180) < sd_time)):
                     post_broadcast_schedule(broadcast_data[vi]['channelId'], vi, broadcast_data[vi]['starttime'])
             except KeyError:
                 continue
@@ -142,6 +142,17 @@ async def check_schedule():
         except KeyError:
             continue
 
+def post_to_discord(userId, videoId):
+    haishin_url = "https://www.youtube.com/watch?v=" + videoId #配信URL
+    content = "配信中！\n" + haishin_url #Discordに投稿される文章
+    main_content = {
+        "username": Streamer[userId][0], #配信者名
+        "avatar_url": Streamer[userId][1], #アイコン
+        "content": content #文章
+    }
+    requests.post(webhook_url, main_content) #Discordに送信
+    broadcast_data.pop(videoId)
+            
 def post_broadcast_schedule(userId, videoId, starttime):
     st = starttime.replace('T', ' ')
     sst = st.replace('Z', '')
@@ -149,11 +160,11 @@ def post_broadcast_schedule(userId, videoId, starttime):
     haishin_url = "https://www.youtube.com/watch?v=" + videoId #配信URL
     content = ssst + "に配信予定！\n" + haishin_url #Discordに投稿される文章
     main_content = {
-        "username": Hololive[userId][0], #配信者名
-        "avatar_url": Hololive[userId][1], #アイコン
+        "username": Streamer[userId][0], #配信者名
+        "avatar_url": Streamer[userId][1], #アイコン
         "content": content #文章
     }
-    requests.post(webhook_url_Hololive_yotei, main_content) #Discordに送信
+    requests.post(webhook_url_yotei, main_content) #Discordに送信
     
 
 # 起動時に動作する処理
