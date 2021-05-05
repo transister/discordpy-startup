@@ -66,10 +66,132 @@ Streamer = {
         "https://yt3.ggpht.com/ytc/AAUvwnhSyw72yPqDbQMSNN6RBJ0nAHa7wmMl-5etY8Bs=s88-c-k-c0x00ffffff-no-rj",
         "VOMS"
     ],
+    "UC0Owc36U9lOyi9Gx9Ic-4qg": [
+        "因幡はねる【あにまーれ】",
+        "https://yt3.ggpht.com/ytc/AAUvwngvgRbvQSxZHcosptXrl6PO3djyKHY7ZLIGbQHo=s176-c-k-c0x00ffffff-no-rj",
+        "Animale"
+    ],
+    "UC2kyQhzGOB-JPgcQX9OMgEw": [
+        "宗谷いちか【あにまーれ】",
+        "https://yt3.ggpht.com/ytc/AAUvwnj2XS4F6MS5aaKGDaQ4mcrPlW44lEN-p9oXqj9x=s176-c-k-c0x00ffffff-no-rj",
+        "Animale"
+    ],
+    "UCRvpMpzAXBRKJQuk-8-Sdvg": [
+        "日ノ隈らん【あにまーれ】",
+        "https://yt3.ggpht.com/ytc/AAUvwnit824wjmPA7AE7LDtG0EVjmutNl4-sICtStfTh=s176-c-k-c0x00ffffff-no-rj",
+        "Animale"
+    ],
+    "UCXp7sNC0F_qkjickvlYkg-Q": [
+        "風見くく【あにまーれ】",
+        "https://yt3.ggpht.com/ytc/AAUvwngUM0DtcqRxbIHvfd8t3D-YEFLudJbN29dpdy44=s176-c-k-c0x00ffffff-no-rj",
+        "Animale"
+    ],
+    "UCW8WKciBixmaqaGqrlTITRQ": [
+        "柚原いづみ【あにまーれ】",
+        "https://yt3.ggpht.com/ytc/AAUvwnhkL2lOLKPB4cqpPgqjHDV9AVypXtkNt10Eqm0=s176-c-k-c0x00ffffff-no-rj",
+        "Animale"
+    ],
+    "UCtzCQnCT9E4o6U3mHHSHbQQ": [
+        "白宮みみ【あにまーれ】",
+        "https://yt3.ggpht.com/ytc/AAUvwnh5PNIZ9uxa95u863cHH2MYouiMqeau7SMPMgIM2g=s176-c-k-c0x00ffffff-no-rj",
+        "Animale"
+    ],
+    "UC_BlXOQe5OcRC7o0GX8kp8A": [
+        "羽柴なつみ【あにまーれ】",
+        "https://yt3.ggpht.com/ytc/AAUvwnhnPVaFf9fcrI0-QGkOQ-qSEz2jx0KI8VdkdzGc=s176-c-k-c0x00ffffff-no-rj",
+        "Animale"
+    ],
+    "UC_WOBIopwUih0rytRnr_1Ag": [
+        "瀬島るい【あにまーれ】",
+        "https://yt3.ggpht.com/ytc/AAUvwniT9Kk84h82ycAnKFqBNqWSb6GYU9msUCuICnU1=s176-c-k-c0x00ffffff-no-rj",
+        "Animale"
+    ],
+    "UCFsWaTQ7kT76jNNGeGIKNSA": [
+        "飛良ひかり【あにまーれ】",
+        "https://yt3.ggpht.com/ytc/AAUvwnggEiqlVN2rxQJAOdr_FDt5FxmAc_zqTKT-Jo1L=s176-c-k-c0x00ffffff-no-rj",
+        "Animale"
+    ],
+    "UC3xG1XWzAKt5dxSxktJvtxg": [
+        " 大浦るかこ【あにまーれ】",
+        "https://yt3.ggpht.com/ytc/AAUvwni5YbJevR91U1BH8ZnAht-KGKlfR9qQ0mq--Ms-=s176-c-k-c0x00ffffff-no-rj",
+        "Animale"
+    ],
+    "UC4PrHgUcAtOoj_LKmUL-uLQ": [
+        "湖南みあ【あにまーれ】",
+        "https://yt3.ggpht.com/ytc/AAUvwnhx0c80q3E3hw9sh-DaAcCdJzQwoj-RGacvGKCr=s176-c-k-c0x00ffffff-no-rj",
+        "Animale"
+    ],
+    "UCqskJ0nmw-_eweWfsKvbrzQ": [
+        "月野木ちろる【あにまーれ】",
+        "https://yt3.ggpht.com/ytc/AAUvwnjuOZitdf-fShd8pKRuJphKOBul_WJ9ikhVJC0t=s176-c-k-c0x00ffffff-no-rj",
+        "Animale"
+    ],
+    "UCwePpiw1ocZRSNSkpKvVISw": [
+        "西園寺メアリ【ハニスト】",
+        "https://yt3.ggpht.com/ytc/AAUvwnhhEokdfq1Mo2x7_TmP2AU-v0nqHFchVBNWqay_=s176-c-k-c0x00ffffff-no-rj",
+        "774inc"
+    ],
+    "UCeLzT-7b2PBcunJplmWtoDg": [
+        "周防パトラ 【ハニスト】",
+        "https://yt3.ggpht.com/ytc/AAUvwni3K3HvrlssJykNA7cE68zGcO4xZPF5k3XLE9sO=s176-c-k-c0x00ffffff-no-rj",
+        "774inc"
+    ],
+    "UCYTz3uIgwVY3ZU-IQJS8r3A": [
+        "島村シャルロット【ハニスト】",
+        "https://yt3.ggpht.com/ytc/AAUvwnjfBbGgsin15WvNkf1f1KvMA956OOECN8FswkYU=s176-c-k-c0x00ffffff-no-rj",
+        "774inc"
+    ],
+    "UCDh2bWI5EDu7PavqwICkVpA": [
+        "堰代ミコ【ハニスト】",
+        "https://yt3.ggpht.com/ytc/AAUvwnj3utKMlGG9fe71Ti1JfPMohMvO_gT_oSCdGC51=s176-c-k-c0x00ffffff-no-rj",
+        "774inc"
+    ],
+    "UCzUNASdzI4PV5SlqtYwAkKQ": [
+        "小森めと 【ブイアパ】",
+        "https://yt3.ggpht.com/ytc/AAUvwngcfYNy2eRoiQds8qhnxWohjghC3WcxLBtOX5Kg=s176-c-k-c0x00ffffff-no-rj",
+        "774inc"
+    ],
+    "UC3EhsuKdEkI99TWZwZgWutg": [
+        "杏戸ゆげ 【ブイアパ】",
+        "https://yt3.ggpht.com/ytc/AAUvwnhldEYLmpc864v-XQDKTryZmS33CK_91Wf2Iwb1=s176-c-k-c0x00ffffff-no-rj",
+        "774inc"
+    ],
+    "UChXm-xAYPfygrbyLo2yCASQ": [
+        "季咲あんこ 【ブイアパ】",
+        "https://yt3.ggpht.com/ytc/AAUvwnguDljqOoJWknfaN1vN3F8NPPPBMydXFK-ljH05=s176-c-k-c0x00ffffff-no-rj",
+        "774inc"
+    ],
+    "UCV4EoK6BVNl7wxuxpUvvSWA": [
+        "不磨わっと 【ブイアパ】",
+        "https://yt3.ggpht.com/ytc/AAUvwnghel9DJYtFb6bSWzpybgFvZVXW5JVewnf7t3X-=s176-c-k-c0x00ffffff-no-rj",
+        "774inc"
+    ],
+    "UCmqrvfLMws-GLGHQcB5dasg": [
+        "花奏 かのん 【ブイアパ】",
+        "https://yt3.ggpht.com/ytc/AAUvwngyYdZqbOy-sD-6uapvOvPFivU6Aizkkjkz0lWqbg=s176-c-k-c0x00ffffff-no-rj",
+        "774inc"
+    ],
+    "UCvPPBoTOor5gm8zSlE2tg4w": [
+        "虎城アンナ 【シュガリリ】",
+        "https://yt3.ggpht.com/ytc/AAUvwng3pwz9U-DRhU-oVEo42HFGbzOElFOMHZ532dlV=s176-c-k-c0x00ffffff-no-rj",
+        "774inc"
+    ],
+    "UC2hc-00y-MSR6eYA4eQ4tjQ": [
+        "龍ヶ崎リン 【シュガリリ】",
+        "https://yt3.ggpht.com/ytc/AAUvwnhPqY2LTUK6Eo6Fl1ZH_kL-Z9QhjDl9a46iwRH-=s176-c-k-c0x00ffffff-no-rj",
+        "774inc"
+    ],
+    "UC--A2dwZW7-M2kID0N6_lfA": [
+        "獅子王クリス 【シュガリリ】",
+        "https://yt3.ggpht.com/ytc/AAUvwngzuEXJ6hxBH1uZtz_iJv1VRC8mMGlqEOXojp9f=s176-c-k-c0x00ffffff-no-rj",
+        "774inc"
+    ],
 } #配信者のチャンネルID, 配信者名, アイコン画像のURLのリスト
 webhook_url = "https://discord.com/api/webhooks/814627315048906802/mast3_S-vt3V0R_fwVhzgrKmWD3H4fYAD9XZQiTuSWKFEupE2aRou24yWiYM6Jtksdjd" #配信開始
 webhook_url_yotei = {"Hololive": ['https://discord.com/api/webhooks/814626994296979456/IisxTTZqQXTvM569Z4TVFYSEqdxEriwt_M9XX_IEEiDsNNqG991tyZr94VOOfjAsBpeJ'],
-                     "VOMS": ['https://discord.com/api/webhooks/838761972651655208/Kf3CGJ4ILSOgnQSm-gSEvtck2-Ug7clLCoQNr5HANyELXjxgffAseMr_j9qjiMxmvi0S']
+                     "VOMS": ['https://discord.com/api/webhooks/838761972651655208/Kf3CGJ4ILSOgnQSm-gSEvtck2-Ug7clLCoQNr5HANyELXjxgffAseMr_j9qjiMxmvi0S'],
+                     "Animale": ['https://discord.com/api/webhooks/839456091549073478/7EOanYAZaCsDWiiBTpqoOaTsmMg6VwhdCXpAvIs-GFWmEv5aqrGsg5v2mdNwqRbuLndu'],
+                     "774inc": ['https://discord.com/api/webhooks/839456401164075019/647cX72CzfwUQA1YoYAE4plZ-pzHLftVSjr3N2Ap_rauabzqRjFUD_wBH3fHeCBw3U6i']                     
                     }#配信予定
 broadcast_data = {} #配信予定のデータを格納
 tmp = {}
