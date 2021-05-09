@@ -224,7 +224,7 @@ async def get_information():
         if(api_now >= 20):
             api_now = 0
         aaa = requests.get(api_link)
-        time.sleep(1)
+        time.sleep(50)
         v_data = json.loads(aaa.text)
         try:
             for item in v_data['items']:#各配信予定動画データに関して
@@ -234,7 +234,7 @@ async def get_information():
                     a = broadcast_data[video]['starttime'] #既にbroadcast_dataにstarttimeがあるかチェック
                 except KeyError:#なかったら
                     aaaa = requests.get("https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&id=" + video + "&key=" + YOUTUBE_API_KEY[api_now])
-                    time.sleep(1)
+                    time.sleep(50)
                     api_now = (api_now + 1) #apiを1つずらす
                     if(api_now >= 20):
                         api_now = 0
