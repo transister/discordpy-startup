@@ -196,7 +196,7 @@ webhook_url_yotei = {"Hololive": ['https://discord.com/api/webhooks/814626994296
 broadcast_data = {} #配信予定のデータを格納
 tmp = {}
 
-YOUTUBE_API_KEY = ["AIzaSyD1v807Gio9K4GVjKVjdRVgw0_kMip7z8Y","AIzaSyDYbIaTUq3yipQrOHncHhHjKDxVRZDZE5s","AIzaSyACZwmWNAyT5w2Spzm3_61Rw0GiH33utRU","AIzaSyDR5AhxSeIKsvIMJDqhsMTfh_fvo6DLR3o","AIzaSyCbmIAmPpKnLMrM2vEGg8MoqTyHgTVMAOM","AIzaSyDE9i7mg0ruYaISi8MPVH-tMd8LE4B_kNg","AIzaSyA2x_6iFWJHDlxjYAq4-ekMz9lHnlgZcAA","AIzaSyDi-PwXFxb9XuQN-SvSWc9fO0vMdWzCaAI","AIzaSyCqydt1Dlwdx-J9FVt8GGWjEJKtj_zYe9I","AIzaSyAxSNNHLlW8S4t4t52azdYaXsUc2Y5nxG0","AIzaSyAq67Ii-vud3-RVwbA6sAeUOsDSUYWe96w","AIzaSyBNdqsiqiXZBzpHjZYPi5FgJ7-lOgQaI1I","AIzaSyBNdqsiqiXZBzpHjZYPi5FgJ7-lOgQaI1I","AIzaSyAmchY_OzHKDqEoi_ks89y5Ng07brqByzM","AIzaSyDci7dBd4MtvgT29hUfyMbyuEqrokJAL6o","AIzaSyB0V6QVJD03PvXKktFzG2uZQRf7u6JG84E","AIzaSyCuEUOgs4s5V0mIpW9qRZnXC5ihPD6tzWI","AIzaSyAWtYDBY5n2QK4KHqXrcG4ixHgkQF9Gbq4","AIzaSyDs1JcQncf2Tz9ITBBc0XD-SmZWVMecI30","AIzaSyBxKv-xL6Wt8XxUNVTS3eo9M-0kTkQ9kgQ","AIzaSyBx_M1JEg0i8BSW2Q-Edlb8lB3zkv6ZDJA"]
+YOUTUBE_API_KEY = ["AIzaSyD1v807Gio9K4GVjKVjdRVgw0_kMip7z8Y","AIzaSyDYbIaTUq3yipQrOHncHhHjKDxVRZDZE5s","AIzaSyACZwmWNAyT5w2Spzm3_61Rw0GiH33utRU","AIzaSyDR5AhxSeIKsvIMJDqhsMTfh_fvo6DLR3o","AIzaSyCbmIAmPpKnLMrM2vEGg8MoqTyHgTVMAOM","AIzaSyDE9i7mg0ruYaISi8MPVH-tMd8LE4B_kNg","AIzaSyA2x_6iFWJHDlxjYAq4-ekMz9lHnlgZcAA","AIzaSyDi-PwXFxb9XuQN-SvSWc9fO0vMdWzCaAI","AIzaSyCqydt1Dlwdx-J9FVt8GGWjEJKtj_zYe9I","AIzaSyAxSNNHLlW8S4t4t52azdYaXsUc2Y5nxG0","AIzaSyAq67Ii-vud3-RVwbA6sAeUOsDSUYWe96w","AIzaSyBNdqsiqiXZBzpHjZYPi5FgJ7-lOgQaI1I","AIzaSyAmchY_OzHKDqEoi_ks89y5Ng07brqByzM","AIzaSyDci7dBd4MtvgT29hUfyMbyuEqrokJAL6o","AIzaSyB0V6QVJD03PvXKktFzG2uZQRf7u6JG84E","AIzaSyCuEUOgs4s5V0mIpW9qRZnXC5ihPD6tzWI","AIzaSyAWtYDBY5n2QK4KHqXrcG4ixHgkQF9Gbq4","AIzaSyDs1JcQncf2Tz9ITBBc0XD-SmZWVMecI30","AIzaSyBxKv-xL6Wt8XxUNVTS3eo9M-0kTkQ9kgQ","AIzaSyBx_M1JEg0i8BSW2Q-Edlb8lB3zkv6ZDJA"]
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -213,7 +213,7 @@ def replace_JST(s):
       time[3] += 9
     return (str(time[0]) + "/" + str(time[1]).zfill(2) + "/" + str(time[2]).zfill(2) + " " + str(time[3]).zfill(2) + ":" + str(time[4]).zfill(2))
 
-@tasks.loop(hours=2)
+@tasks.loop(hours=1)
 async def get_information():
     tmp = copy.copy(broadcast_data)
     now_time = datetime.now() + timedelta(hours=9)
@@ -224,7 +224,7 @@ async def get_information():
         if(api_now >= 20):
             api_now = 0
         aaa = requests.get(api_link)
-        time.sleep(50)
+        time.sleep(1)
         v_data = json.loads(aaa.text)
         try:
             for item in v_data['items']:#各配信予定動画データに関して
@@ -234,7 +234,7 @@ async def get_information():
                     a = broadcast_data[video]['starttime'] #既にbroadcast_dataにstarttimeがあるかチェック
                 except KeyError:#なかったら
                     aaaa = requests.get("https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&id=" + video + "&key=" + YOUTUBE_API_KEY[api_now])
-                    time.sleep(50)
+                    time.sleep(1)
                     api_now = (api_now + 1) #apiを1つずらす
                     if(api_now >= 20):
                         api_now = 0
@@ -261,7 +261,7 @@ async def check_schedule():
         try:
             sd_time = datetime.strptime(broadcast_data[bd]['starttime'], '%Y-%m-%dT%H:%M:%SZ') #配信スタート時間をdatetime型で保管
             sd_time += timedelta(hours=9)
-            if((sd_time + timedelta(minutes=90)) >= now_time >= sd_time):#今の方が配信開始時刻よりも後だったら
+            if((sd_time + timedelta(minutes=60)) >= now_time >= sd_time):#今の方が配信開始時刻よりも後だったら
                 post_to_discord(broadcast_data[bd]['channelId'], bd) #ツイート
         except KeyError:
             continue
