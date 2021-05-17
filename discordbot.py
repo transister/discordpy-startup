@@ -256,7 +256,7 @@ async def get_information():
     for idol in Streamer:
         if(Streamer[idol][3] == "set"):
             continue
-        api_link = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=" + idol + "&key=" + YOUTUBE_API_KEY[api_now] + "&eventType=upcoming&type=video"
+        api_link = "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id,snippet/title,snippet/channelId)&channelId=" + idol + "&key=" + YOUTUBE_API_KEY[api_now] + "&eventType=upcoming&type=video"
         api_now = (api_now + 1)  #apiを1つずらす
         if(api_now >= 20):
             api_now = 0
@@ -269,7 +269,7 @@ async def get_information():
                 try:
                     a = broadcast_data[video]['starttime'] #既にbroadcast_dataにstarttimeがあるかチェック
                 except KeyError:#なかったら
-                    aaaa = requests.get("https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&id=" + video + "&key=" + YOUTUBE_API_KEY[api_now])
+                    aaaa = requests.get("https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&fields=items(liveStreamingDetails/scheduledStartTime)&id=" + video + "&key=" + YOUTUBE_API_KEY[api_now])
                     api_now = (api_now + 1) #apiを1つずらす
                     if(api_now >= 20):
                         api_now = 0
