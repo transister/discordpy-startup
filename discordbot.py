@@ -231,7 +231,7 @@ webhook_url_yotei = {"Hololive": ['https://discord.com/api/webhooks/814626994296
 broadcast_data = {} #配信予定のデータを格納
 tmp = {}
 
-YOUTUBE_API_KEY = ["AIzaSyD1v807Gio9K4GVjKVjdRVgw0_kMip7z8Y","AIzaSyC-ih2ZHRJGBB8g7L7rF56TytizBfWtvSg","AIzaSyBTUmUSv6iHlZpxyE_vEKRV19G6IGetV4Y","AIzaSyC1uaYl8AXFS7AAimTC8jymxPh77aMzK3c","AIzaSyDYbIaTUq3yipQrOHncHhHjKDxVRZDZE5s","AIzaSyAbnJ0pYyoW0zfGKW9HxMm6JSsENdxlx-I","AIzaSyAT7vWfMQbCbotPepbbK1O162JynlJFJtA","AIzaSyDOKkYjxdC6DeQ-T0ryPGdVKZyP99bonmo","AIzaSyACZwmWNAyT5w2Spzm3_61Rw0GiH33utRU","AIzaSyAhcDbwDB2K_eaj36ee9INQ4HNZEIe777k","AIzaSyBlthFUWMqaSHafcwfshLBGudL_tGb0fpI","AIzaSyBDK8vNqtr3Nx6t-PYiNGlrsTL7ThKw0RU","AIzaSyDR5AhxSeIKsvIMJDqhsMTfh_fvo6DLR3o","AIzaSyAcpwoOcrvogLp9O7eaNvTZ1KDJ0dvwGhg","AIzaSyCn7OJDOmiWElAUZXQvgHvsb58Te9NMINM","AIzaSyCqvaksmeuqUpPO3Rvu3S2wJ7539TKR3YQ","AIzaSyCbmIAmPpKnLMrM2vEGg8MoqTyHgTVMAOM","AIzaSyB9hze4ktqOCwi2HLHTqfhULagXJZwhCTE","AIzaSyDRcTu-RP1O6XSPx3nCWqDWHm8VZ_5b-As","AIzaSyCVD3022cyNTtH4jj972_LTYorvO9kiTuc"]
+YOUTUBE_API_KEY = ["AIzaSyD1v807Gio9K4GVjKVjdRVgw0_kMip7z8Y","AIzaSyC-ih2ZHRJGBB8g7L7rF56TytizBfWtvSg","AIzaSyBTUmUSv6iHlZpxyE_vEKRV19G6IGetV4Y","AIzaSyC1uaYl8AXFS7AAimTC8jymxPh77aMzK3c","AIzaSyC9yspsyAtJhSJVRZ53GX--r6Ch9Vx2LBA","AIzaSyDYbIaTUq3yipQrOHncHhHjKDxVRZDZE5s","AIzaSyAbnJ0pYyoW0zfGKW9HxMm6JSsENdxlx-I","AIzaSyAT7vWfMQbCbotPepbbK1O162JynlJFJtA","AIzaSyDOKkYjxdC6DeQ-T0ryPGdVKZyP99bonmo","AIzaSyC0lIK6zarJup4jlUQISBfgYrwGtmH02H0","AIzaSyACZwmWNAyT5w2Spzm3_61Rw0GiH33utRU","AIzaSyAhcDbwDB2K_eaj36ee9INQ4HNZEIe777k","AIzaSyBlthFUWMqaSHafcwfshLBGudL_tGb0fpI","AIzaSyBDK8vNqtr3Nx6t-PYiNGlrsTL7ThKw0RU","AIzaSyC1ufcMLyTpiTefmziyFl_4lQk48MLza1Q","AIzaSyDR5AhxSeIKsvIMJDqhsMTfh_fvo6DLR3o","AIzaSyAcpwoOcrvogLp9O7eaNvTZ1KDJ0dvwGhg","AIzaSyCn7OJDOmiWElAUZXQvgHvsb58Te9NMINM","AIzaSyCqvaksmeuqUpPO3Rvu3S2wJ7539TKR3YQ","AIzaSyAFwszNUh3VjgEqdxjanzgTUg6LxCPjCMI"]
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -248,7 +248,7 @@ def replace_JST(s):
       time[3] += 9
     return (str(time[0]) + "/" + str(time[1]).zfill(2) + "/" + str(time[2]).zfill(2) + " " + str(time[3]).zfill(2) + ":" + str(time[4]).zfill(2))
 
-@tasks.loop(hours=3)
+@tasks.loop(hours=2)
 async def get_information():
     tmp = copy.copy(broadcast_data)
     now_time = datetime.now() + timedelta(hours=9)
