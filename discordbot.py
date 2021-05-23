@@ -253,8 +253,8 @@ async def get_information():
     tmp = copy.copy(broadcast_data)
     now_time = datetime.now() + timedelta(hours=9)
     api_now = 0 #現在どのYouTube APIを使っているかを記録
-    queryWord = Streamer[0][3]
-    queryWord_buf = Streamer[0][3]
+    queryWord = "戌神ころね"
+    queryWord_buf = "戌神ころね"
     idList = []
     for idol in Streamer:
         if(queryWord_buf != Streamer[idol][3]):
