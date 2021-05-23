@@ -15,211 +15,211 @@ Streamer = {
         "戌神ころね",
         "https://yt3.ggpht.com/ytc/AAUvwnimjdERaJDGopfH8UaB0r9tr_p8uyuEWWyYVkAd5Q=s88-c-k-c0x00ffffff-no-rj",
         "Hololive",
-        "waiting"
+        "戌神ころね"
     ],
     "UCCzUftO8KOVkV4wQG1vkUvg": [
         "宝鐘マリン",
         "https://yt3.ggpht.com/ytc/AAUvwnjPuFWs42Vx2yIhK7z1w4L-e1GIpHn_5R1uknbS=s88-c-k-c0x00ffffff-no-rj",
         "Hololive",
-        "waiting"
+        "宝鐘マリン"
     ],
     "UC1DCedRgGHBdm81E1llLhOQ": [
         "兎田ぺこら",
         "https://yt3.ggpht.com/ytc/AAUvwnjvkyPGzOmEXZ34mEFPlwMKTbCDl1ZkQ_HkxY-O5Q=s88-c-k-c0x00ffffff-no-rj",
         "Hololive",
-        "waiting"
+        "兎田ぺこら"
     ],
     "UC5CwaMl1eIgY8h02uZw7u8A": [
         "星街すいせい",
         "https://yt3.ggpht.com/ytc/AAUvwnjdAl5rn3IjWzl55_0-skvKced7znPZRuPC5xLB=s88-c-k-c0x00ffffff-no-rj",
         "Hololive",
-        "waiting"
+        "星街すいせい"
     ],
     "UCdn5BQ06XqgXoAxIhbqw5Rg": [
         "白上フブキ",
         "https://yt3.ggpht.com/ytc/AAUvwniEQsukDZoC-l8zchhRzpraxcH7Fyq9amrj2980Aw=s88-c-k-c0x00ffffff-no-rj",
         "Hololive",
-        "waiting"
+        "白上フブキ"
     ],
     "UC1opHUrw8rvnsadT-iGp7Cg": [
         "湊あくあ",
         "https://yt3.ggpht.com/ytc/AAUvwngM9Jmc29dvbOY43w7RWFbOZLU4tGtOkEwtt-g7PA=s88-c-k-c0x00ffffff-no-rj",
         "Hololive",
-        "waiting"
+        "湊あくあ"
     ],
     "UCvzGlP9oQwU--Y0r9id_jnA": [
         "大空スバル",
         "https://yt3.ggpht.com/ytc/AAUvwniCgko15I_x5bYWm0G2vnf5hZqD5hLOtLEDw0Na=s88-c-k-c0x00ffffff-no-rj",
         "Hololive",
-        "waiting"
+        "大空スバル"
     ],
     "UCQ0UDLQCjY0rmuxCDE38FGg": [
         "夏色まつり",
         "https://yt3.ggpht.com/ytc/AAUvwni8cjtyc08E7rocvO9_gR1b5BhO1O6O1VreDxMW=s176-c-k-c0x00ffffff-no-rj",
         "Hololive",
-        "waiting"
+        "夏色まつり"
     ],
     "UCdyqAaZDKHXg4Ahi7VENThQ": [
         "白銀ノエル",
         "https://yt3.ggpht.com/ytc/AAUvwnijLF2X1YBVQo3rClt7ub29cYM7OzpmRmliaGbw=s88-c-k-c0x00ffffff-no-rj",
         "Hololive",
-        "waiting"
+        "白銀ノエル"
     ],
     "UCajhBT4nMrg3DLS-bLL2RCg": [
         "天野ピカミィ",
         "https://yt3.ggpht.com/ytc/AAUvwnjfPSGerlUwIcpujHs9De6IZYRuH_H2v1heW48b=s88-c-k-c0x00ffffff-no-rj",
         "VOMS",
-        "waiting"
+        "VOMS"
     ],
     "UC3vzVK_N_SUVKqbX69L_X4g": [
         "緋笠トモシカ",
         "https://yt3.ggpht.com/ytc/AAUvwnhSyw72yPqDbQMSNN6RBJ0nAHa7wmMl-5etY8Bs=s88-c-k-c0x00ffffff-no-rj",
         "VOMS",
-        "waiting"
+        "VOMS"
     ],
     "UC0Owc36U9lOyi9Gx9Ic-4qg": [
         "因幡はねる【あにまーれ】",
         "https://yt3.ggpht.com/ytc/AAUvwngvgRbvQSxZHcosptXrl6PO3djyKHY7ZLIGbQHo=s176-c-k-c0x00ffffff-no-rj",
         "Animale",
-        "waiting"
+        "【あにまーれ】"
     ],
     "UC2kyQhzGOB-JPgcQX9OMgEw": [
         "宗谷いちか【あにまーれ】",
         "https://yt3.ggpht.com/ytc/AAUvwnj2XS4F6MS5aaKGDaQ4mcrPlW44lEN-p9oXqj9x=s176-c-k-c0x00ffffff-no-rj",
         "Animale",
-        "waiting"
+        "【あにまーれ】"
     ],
     "UCRvpMpzAXBRKJQuk-8-Sdvg": [
         "日ノ隈らん【あにまーれ】",
         "https://yt3.ggpht.com/ytc/AAUvwnit824wjmPA7AE7LDtG0EVjmutNl4-sICtStfTh=s176-c-k-c0x00ffffff-no-rj",
         "Animale",
-        "waiting"
+        "【あにまーれ】"
     ],
     "UCXp7sNC0F_qkjickvlYkg-Q": [
         "風見くく【あにまーれ】",
         "https://yt3.ggpht.com/ytc/AAUvwngUM0DtcqRxbIHvfd8t3D-YEFLudJbN29dpdy44=s176-c-k-c0x00ffffff-no-rj",
         "Animale",
-        "waiting"
+        "【あにまーれ】"
     ],
     "UCW8WKciBixmaqaGqrlTITRQ": [
         "柚原いづみ【あにまーれ】",
         "https://yt3.ggpht.com/ytc/AAUvwnhkL2lOLKPB4cqpPgqjHDV9AVypXtkNt10Eqm0=s176-c-k-c0x00ffffff-no-rj",
         "Animale",
-        "waiting"
+        "【あにまーれ】"
     ],
     "UCtzCQnCT9E4o6U3mHHSHbQQ": [
         "白宮みみ【あにまーれ】",
         "https://yt3.ggpht.com/ytc/AAUvwnh5PNIZ9uxa95u863cHH2MYouiMqeau7SMPMgIM2g=s176-c-k-c0x00ffffff-no-rj",
         "Animale",
-        "waiting"
+        "【あにまーれ】"
     ],
     "UC_BlXOQe5OcRC7o0GX8kp8A": [
         "羽柴なつみ【あにまーれ】",
         "https://yt3.ggpht.com/ytc/AAUvwnhnPVaFf9fcrI0-QGkOQ-qSEz2jx0KI8VdkdzGc=s176-c-k-c0x00ffffff-no-rj",
         "Animale",
-        "waiting"
+        "【あにまーれ】"
     ],
     "UC_WOBIopwUih0rytRnr_1Ag": [
         "瀬島るい【あにまーれ】",
         "https://yt3.ggpht.com/ytc/AAUvwniT9Kk84h82ycAnKFqBNqWSb6GYU9msUCuICnU1=s176-c-k-c0x00ffffff-no-rj",
         "Animale",
-        "waiting"
+        "【あにまーれ】"
     ],
     "UCFsWaTQ7kT76jNNGeGIKNSA": [
         "飛良ひかり【あにまーれ】",
         "https://yt3.ggpht.com/ytc/AAUvwnggEiqlVN2rxQJAOdr_FDt5FxmAc_zqTKT-Jo1L=s176-c-k-c0x00ffffff-no-rj",
         "Animale",
-        "waiting"
+        "【あにまーれ】"
     ],
     "UC3xG1XWzAKt5dxSxktJvtxg": [
-        " 大浦るかこ【あにまーれ】",
+        "大浦るかこ【あにまーれ】",
         "https://yt3.ggpht.com/ytc/AAUvwni5YbJevR91U1BH8ZnAht-KGKlfR9qQ0mq--Ms-=s176-c-k-c0x00ffffff-no-rj",
         "Animale",
-        "waiting"
+        "【あにまーれ】"
     ],
     "UC4PrHgUcAtOoj_LKmUL-uLQ": [
         "湖南みあ【あにまーれ】",
         "https://yt3.ggpht.com/ytc/AAUvwnhx0c80q3E3hw9sh-DaAcCdJzQwoj-RGacvGKCr=s176-c-k-c0x00ffffff-no-rj",
         "Animale",
-        "waiting"
+        "【あにまーれ】"
     ],
     "UCqskJ0nmw-_eweWfsKvbrzQ": [
         "月野木ちろる【あにまーれ】",
         "https://yt3.ggpht.com/ytc/AAUvwnjuOZitdf-fShd8pKRuJphKOBul_WJ9ikhVJC0t=s176-c-k-c0x00ffffff-no-rj",
         "Animale",
-        "waiting"
+        "【あにまーれ】"
     ],
     "UCwePpiw1ocZRSNSkpKvVISw": [
         "西園寺メアリ【ハニスト】",
         "https://yt3.ggpht.com/ytc/AAUvwnhhEokdfq1Mo2x7_TmP2AU-v0nqHFchVBNWqay_=s176-c-k-c0x00ffffff-no-rj",
         "774inc",
-        "waiting"
+        "【ハニスト】"
     ],
     "UCeLzT-7b2PBcunJplmWtoDg": [
         "周防パトラ 【ハニスト】",
         "https://yt3.ggpht.com/ytc/AAUvwni3K3HvrlssJykNA7cE68zGcO4xZPF5k3XLE9sO=s176-c-k-c0x00ffffff-no-rj",
         "774inc",
-        "waiting"
+        "【ハニスト】"
     ],
     "UCYTz3uIgwVY3ZU-IQJS8r3A": [
         "島村シャルロット【ハニスト】",
         "https://yt3.ggpht.com/ytc/AAUvwnjfBbGgsin15WvNkf1f1KvMA956OOECN8FswkYU=s176-c-k-c0x00ffffff-no-rj",
         "774inc",
-        "waiting"
+        "【ハニスト】"
     ],
     "UCDh2bWI5EDu7PavqwICkVpA": [
         "堰代ミコ【ハニスト】",
         "https://yt3.ggpht.com/ytc/AAUvwnj3utKMlGG9fe71Ti1JfPMohMvO_gT_oSCdGC51=s176-c-k-c0x00ffffff-no-rj",
         "774inc",
-        "waiting"
+        "【ハニスト】"
     ],
     "UCzUNASdzI4PV5SlqtYwAkKQ": [
         "小森めと 【ブイアパ】",
         "https://yt3.ggpht.com/ytc/AAUvwngcfYNy2eRoiQds8qhnxWohjghC3WcxLBtOX5Kg=s176-c-k-c0x00ffffff-no-rj",
         "774inc",
-        "waiting"
+        "【ブイアパ】"
     ],
     "UC3EhsuKdEkI99TWZwZgWutg": [
         "杏戸ゆげ 【ブイアパ】",
         "https://yt3.ggpht.com/ytc/AAUvwnhldEYLmpc864v-XQDKTryZmS33CK_91Wf2Iwb1=s176-c-k-c0x00ffffff-no-rj",
         "774inc",
-        "waiting"
+        "【ブイアパ】"
     ],
     "UChXm-xAYPfygrbyLo2yCASQ": [
         "季咲あんこ 【ブイアパ】",
         "https://yt3.ggpht.com/ytc/AAUvwnguDljqOoJWknfaN1vN3F8NPPPBMydXFK-ljH05=s176-c-k-c0x00ffffff-no-rj",
         "774inc",
-        "waiting"
+        "【ブイアパ】"
     ],
     "UCV4EoK6BVNl7wxuxpUvvSWA": [
         "不磨わっと 【ブイアパ】",
         "https://yt3.ggpht.com/ytc/AAUvwnghel9DJYtFb6bSWzpybgFvZVXW5JVewnf7t3X-=s176-c-k-c0x00ffffff-no-rj",
         "774inc",
-        "waiting"
+        "【ブイアパ】"
     ],
     "UCmqrvfLMws-GLGHQcB5dasg": [
         "花奏 かのん 【ブイアパ】",
         "https://yt3.ggpht.com/ytc/AAUvwngyYdZqbOy-sD-6uapvOvPFivU6Aizkkjkz0lWqbg=s176-c-k-c0x00ffffff-no-rj",
         "774inc",
-        "waiting"
+        "【ブイアパ】"
     ],
     "UCvPPBoTOor5gm8zSlE2tg4w": [
         "虎城アンナ 【シュガリリ】",
         "https://yt3.ggpht.com/ytc/AAUvwng3pwz9U-DRhU-oVEo42HFGbzOElFOMHZ532dlV=s176-c-k-c0x00ffffff-no-rj",
         "774inc",
-        "waiting"
+        "【シュガリリ】"
     ],
     "UC2hc-00y-MSR6eYA4eQ4tjQ": [
         "龍ヶ崎リン 【シュガリリ】",
         "https://yt3.ggpht.com/ytc/AAUvwnhPqY2LTUK6Eo6Fl1ZH_kL-Z9QhjDl9a46iwRH-=s176-c-k-c0x00ffffff-no-rj",
         "774inc",
-        "waiting"
+        "【シュガリリ】"
     ],
     "UC--A2dwZW7-M2kID0N6_lfA": [
         "獅子王クリス 【シュガリリ】",
         "https://yt3.ggpht.com/ytc/AAUvwngzuEXJ6hxBH1uZtz_iJv1VRC8mMGlqEOXojp9f=s176-c-k-c0x00ffffff-no-rj",
         "774inc",
-        "waiting"
+        "【シュガリリ】"
     ],
 } #配信者のチャンネルID, 配信者名, アイコン画像のURLのリスト
 webhook_url = "https://discord.com/api/webhooks/814627315048906802/mast3_S-vt3V0R_fwVhzgrKmWD3H4fYAD9XZQiTuSWKFEupE2aRou24yWiYM6Jtksdjd" #配信開始
@@ -231,7 +231,7 @@ webhook_url_yotei = {"Hololive": ['https://discord.com/api/webhooks/814626994296
 broadcast_data = {} #配信予定のデータを格納
 tmp = {}
 
-YOUTUBE_API_KEY = ["AIzaSyD1v807Gio9K4GVjKVjdRVgw0_kMip7z8Y","AIzaSyC-ih2ZHRJGBB8g7L7rF56TytizBfWtvSg","AIzaSyBTUmUSv6iHlZpxyE_vEKRV19G6IGetV4Y","AIzaSyC1uaYl8AXFS7AAimTC8jymxPh77aMzK3c","AIzaSyC9yspsyAtJhSJVRZ53GX--r6Ch9Vx2LBA","AIzaSyDYbIaTUq3yipQrOHncHhHjKDxVRZDZE5s","AIzaSyAbnJ0pYyoW0zfGKW9HxMm6JSsENdxlx-I","AIzaSyAT7vWfMQbCbotPepbbK1O162JynlJFJtA","AIzaSyDOKkYjxdC6DeQ-T0ryPGdVKZyP99bonmo","AIzaSyC0lIK6zarJup4jlUQISBfgYrwGtmH02H0","AIzaSyACZwmWNAyT5w2Spzm3_61Rw0GiH33utRU","AIzaSyAhcDbwDB2K_eaj36ee9INQ4HNZEIe777k","AIzaSyBlthFUWMqaSHafcwfshLBGudL_tGb0fpI","AIzaSyBDK8vNqtr3Nx6t-PYiNGlrsTL7ThKw0RU","AIzaSyC1ufcMLyTpiTefmziyFl_4lQk48MLza1Q","AIzaSyDR5AhxSeIKsvIMJDqhsMTfh_fvo6DLR3o","AIzaSyAcpwoOcrvogLp9O7eaNvTZ1KDJ0dvwGhg","AIzaSyCn7OJDOmiWElAUZXQvgHvsb58Te9NMINM","AIzaSyCqvaksmeuqUpPO3Rvu3S2wJ7539TKR3YQ","AIzaSyAFwszNUh3VjgEqdxjanzgTUg6LxCPjCMI"]
+YOUTUBE_API_KEY = ["AIzaSyCiWfz-dB0o-EbnT2YzKVFIzBk2E0nAdQU"]
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -253,31 +253,33 @@ async def get_information():
     tmp = copy.copy(broadcast_data)
     now_time = datetime.now() + timedelta(hours=9)
     api_now = 0 #現在どのYouTube APIを使っているかを記録
-    for idol in Streamer:
-        if(Streamer[idol][3] == "set"):
-            continue
-        api_link = "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id,snippet/title,snippet/channelId)&channelId=" + idol + "&key=" + YOUTUBE_API_KEY[api_now] + "&eventType=upcoming&type=video"
-        api_now = (api_now + 1)  #apiを1つずらす
-        if(api_now >= 20):
-            api_now = 0
-        aaa = requests.get(api_link)
-        v_data = json.loads(aaa.text)
-        try:
-            for item in v_data['items']:#各配信予定動画データに関して
-                broadcast_data[item['id']['videoId']] = {'channelId':item['snippet']['channelId']} #channelIDを格納
-            for video in broadcast_data:
-                try:
-                    a = broadcast_data[video]['starttime'] #既にbroadcast_dataにstarttimeがあるかチェック
-                except KeyError:#なかったら
-                    aaaa = requests.get("https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&fields=items(liveStreamingDetails/scheduledStartTime)&id=" + video + "&key=" + YOUTUBE_API_KEY[api_now])
-                    api_now = (api_now + 1) #apiを1つずらす
-                    if(api_now >= 20):
-                        api_now = 0
-                    vd = json.loads(aaaa.text)
-                    print(vd)
-                    broadcast_data[video]['starttime'] = vd['items'][0]['liveStreamingDetails']['scheduledStartTime']
-        except KeyError: #配信予定がなくて403が出た
-            continue
+    queryWord = Streamer[0][3]
+    queryWord_buf = Streamer[0][3]
+    idList = {}
+    for idol in Streamer
+        if(queryWord_buf <> Streamer[idol][3]):
+            queryWord = queryWord + "|" + Streamer[idol][3]
+            queryWord_buf = Streamer[idol][3]
+        idList.append(idol)
+    api_link = "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id,snippet/title,snippet/channelId,snippet/publishedAt)&q=" + queryWord + "&key=" + YOUTUBE_API_KEY[api_now] + "&eventType=upcoming&type=video"
+    aaa = requests.get(api_link)
+    v_data = json.loads(aaa.text)
+    try:
+        for item in v_data['items']:#各配信予定動画データに関して
+            if(item['snippet']['channelId'] in idList):
+                add_time = datetime.strptime(item['snippet']['publishedAt'], '%Y-%m-%dT%H:%M:%SZ') 
+                add_time += timedelta(hours=9)
+                    if((add_time + timedelta(days=7)) >= now_time):
+                        broadcast_data[item['id']['videoId']] = {'channelId':item['snippet']['channelId']} #channelIDを格納
+        for video in broadcast_data:
+            try:
+                a = broadcast_data[video]['starttime'] #既にbroadcast_dataにstarttimeがあるかチェック
+            except KeyError:#なかったら
+                aaaa = requests.get("https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&fields=items(liveStreamingDetails/scheduledStartTime)&id=" + video + "&key=" + YOUTUBE_API_KEY[api_now])
+                vd = json.loads(aaaa.text)
+                broadcast_data[video]['starttime'] = vd['items'][0]['liveStreamingDetails']['scheduledStartTime']
+    except KeyError: #配信予定がなくて403が出た
+        continue
     for vi in list(broadcast_data):
         if(not(vi in tmp)):
             print(broadcast_data[vi])
@@ -310,7 +312,6 @@ def post_to_discord(userId, videoId):
         "content": content #文章
     }
     requests.post(webhook_url, main_content) #Discordに送信
-    Streamer[userId][3] = "waiting"
     broadcast_data.pop(videoId)
             
 def post_broadcast_schedule(userId, videoId, starttime):
@@ -325,7 +326,6 @@ def post_broadcast_schedule(userId, videoId, starttime):
         "content": content #文章
     }
     requests.post(webhook_url_yotei[Streamer[userId][2]][0], main_content) #Discordに送信
-    Streamer[userId][3] = "set"
     
 
 # 起動時に動作する処理
