@@ -81,7 +81,7 @@ Streamer = {
         "因幡はねる【あにまーれ】",
         "https://yt3.ggpht.com/ytc/AAUvwngvgRbvQSxZHcosptXrl6PO3djyKHY7ZLIGbQHo=s176-c-k-c0x00ffffff-no-rj",
         "Animale",
-        "【あにまーれ】"
+        "774inc"
     ],
     "UC2kyQhzGOB-JPgcQX9OMgEw": [
         "宗谷いちか【あにまーれ】",
@@ -266,10 +266,7 @@ async def get_information():
     v_data = json.loads(aaa.text)
     for item in v_data['items']:#各配信予定動画データに関して
         if(item['snippet']['channelId'] in idList):
-            add_time = datetime.strptime(item['snippet']['publishedAt'], '%Y-%m-%dT%H:%M:%SZ') 
-            add_time += timedelta(hours=9)
-            if((add_time + timedelta(days=7)) >= now_time):
-                broadcast_data[item['id']['videoId']] = {'channelId':item['snippet']['channelId']} #channelIDを格納
+            broadcast_data[item['id']['videoId']] = {'channelId':item['snippet']['channelId']} #channelIDを格納
     for video in broadcast_data:
         try:
             a = broadcast_data[video]['starttime'] #既にbroadcast_dataにstarttimeがあるかチェック
