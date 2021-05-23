@@ -248,13 +248,13 @@ def replace_JST(s):
       time[3] += 9
     return (str(time[0]) + "/" + str(time[1]).zfill(2) + "/" + str(time[2]).zfill(2) + " " + str(time[3]).zfill(2) + ":" + str(time[4]).zfill(2))
 
-@tasks.loop(hours=2)
+@tasks.loop(minutes=30)
 async def get_information():
     tmp = copy.copy(broadcast_data)
     now_time = datetime.now() + timedelta(hours=9)
     api_now = 0 #現在どのYouTube APIを使っているかを記録
-    queryWord = "戌神ころね"
-    queryWord_buf = "戌神ころね"
+    queryWord = Streamer[0][3]
+    queryWord_buf = Streamer[0][3]
     idList = []
     for idol in Streamer:
         if(queryWord_buf != Streamer[idol][3]):
@@ -295,7 +295,7 @@ async def check_schedule():
         try:
             sd_time = datetime.strptime(broadcast_data[bd]['starttime'], '%Y-%m-%dT%H:%M:%SZ') #配信スタート時間をdatetime型で保管
             sd_time += timedelta(hours=9)
-            if((sd_time + timedelta(minutes=60)) >= now_time >= sd_time):#今の方が配信開始時刻よりも後だったら
+            if((sd_time + timedelta(minutes=30)) >= now_time >= sd_time):#今の方が配信開始時刻よりも後だったら
                 post_to_discord(broadcast_data[bd]['channelId'], bd) #ツイート
         except KeyError:
             continue
