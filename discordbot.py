@@ -256,7 +256,7 @@ async def get_information():
     queryWord = Streamer[0][3]
     queryWord_buf = Streamer[0][3]
     idList = {}
-    for idol in Streamer
+    for idol in Streamer:
         if(queryWord_buf <> Streamer[idol][3]):
             queryWord = queryWord + "|" + Streamer[idol][3]
             queryWord_buf = Streamer[idol][3]
