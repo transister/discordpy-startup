@@ -257,7 +257,7 @@ async def get_information():
     queryWord_buf = "戌神ころね"
     idList = []
     for idol in Streamer:
-        if(queryWord_buf  Streamer[idol][3]):
+        if(queryWord_buf != Streamer[idol][3]):
             queryWord = queryWord + "|" + Streamer[idol][3]
             queryWord_buf = Streamer[idol][3]
         idList.append(idol)
