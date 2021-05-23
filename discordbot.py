@@ -253,15 +253,15 @@ async def get_information():
     tmp = copy.copy(broadcast_data)
     now_time = datetime.now() + timedelta(hours=9)
     api_now = 0 #現在どのYouTube APIを使っているかを記録
-    queryWord = Streamer[0][3]
-    queryWord_buf = Streamer[0][3]
-    idList = {}
+    queryWord = "戌神ころね"
+    queryWord_buf = "戌神ころね"
+    idList = []
     for idol in Streamer:
         if(queryWord_buf <> Streamer[idol][3]):
             queryWord = queryWord + "|" + Streamer[idol][3]
             queryWord_buf = Streamer[idol][3]
         idList.append(idol)
-    api_link = "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id,snippet/title,snippet/channelId,snippet/publishedAt)&q=" + queryWord + "&key=" + YOUTUBE_API_KEY[api_now] + "&eventType=upcoming&type=video"
+    api_link = "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id,snippet/title,snippet/channelId,snippet/publishedAt)&q=" + queryWord + "&key=" + YOUTUBE_API_KEY[0] + "&eventType=upcoming&type=video"
     aaa = requests.get(api_link)
     v_data = json.loads(aaa.text)
     try:
@@ -275,7 +275,7 @@ async def get_information():
             try:
                 a = broadcast_data[video]['starttime'] #既にbroadcast_dataにstarttimeがあるかチェック
             except KeyError:#なかったら
-                aaaa = requests.get("https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&fields=items(liveStreamingDetails/scheduledStartTime)&id=" + video + "&key=" + YOUTUBE_API_KEY[api_now])
+                aaaa = requests.get("https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&fields=items(liveStreamingDetails/scheduledStartTime)&id=" + video + "&key=" + YOUTUBE_API_KEY[0])
                 vd = json.loads(aaaa.text)
                 broadcast_data[video]['starttime'] = vd['items'][0]['liveStreamingDetails']['scheduledStartTime']
     except KeyError: #配信予定がなくて403が出た
