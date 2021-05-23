@@ -264,22 +264,19 @@ async def get_information():
     api_link = "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id,snippet/title,snippet/channelId,snippet/publishedAt)&q=" + queryWord + "&key=" + YOUTUBE_API_KEY[0] + "&eventType=upcoming&type=video"
     aaa = requests.get(api_link)
     v_data = json.loads(aaa.text)
-    try:
-        for item in v_data['items']:#各配信予定動画データに関して
-            if(item['snippet']['channelId'] in idList):
-                add_time = datetime.strptime(item['snippet']['publishedAt'], '%Y-%m-%dT%H:%M:%SZ') 
-                add_time += timedelta(hours=9)
-                    if((add_time + timedelta(days=7)) >= now_time):
-                        broadcast_data[item['id']['videoId']] = {'channelId':item['snippet']['channelId']} #channelIDを格納
-        for video in broadcast_data:
-            try:
-                a = broadcast_data[video]['starttime'] #既にbroadcast_dataにstarttimeがあるかチェック
-            except KeyError:#なかったら
-                aaaa = requests.get("https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&fields=items(liveStreamingDetails/scheduledStartTime)&id=" + video + "&key=" + YOUTUBE_API_KEY[0])
-                vd = json.loads(aaaa.text)
-                broadcast_data[video]['starttime'] = vd['items'][0]['liveStreamingDetails']['scheduledStartTime']
-    except KeyError: #配信予定がなくて403が出た
-        continue
+    for item in v_data['items']:#各配信予定動画データに関して
+        if(item['snippet']['channelId'] in idList):
+            add_time = datetime.strptime(item['snippet']['publishedAt'], '%Y-%m-%dT%H:%M:%SZ') 
+            add_time += timedelta(hours=9)
+            if((add_time + timedelta(days=7)) >= now_time):
+                broadcast_data[item['id']['videoId']] = {'channelId':item['snippet']['channelId']} #channelIDを格納
+    for video in broadcast_data:
+        try:
+            a = broadcast_data[video]['starttime'] #既にbroadcast_dataにstarttimeがあるかチェック
+        except KeyError:#なかったら
+            aaaa = requests.get("https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&fields=items(liveStreamingDetails/scheduledStartTime)&id=" + video + "&key=" + YOUTUBE_API_KEY[0])
+            vd = json.loads(aaaa.text)
+            broadcast_data[video]['starttime'] = vd['items'][0]['liveStreamingDetails']['scheduledStartTime']
     for vi in list(broadcast_data):
         if(not(vi in tmp)):
             print(broadcast_data[vi])
