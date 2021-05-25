@@ -248,7 +248,7 @@ def replace_JST(s):
       time[3] += 9
     return (str(time[0]) + "/" + str(time[1]).zfill(2) + "/" + str(time[2]).zfill(2) + " " + str(time[3]).zfill(2) + ":" + str(time[4]).zfill(2))
 
-@tasks.loop(minutes=30)
+@tasks.loop(minutes=60)
 async def get_information():
     tmp = copy.copy(broadcast_data)
     now_time = datetime.now() + timedelta(hours=9)
