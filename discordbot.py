@@ -248,7 +248,7 @@ def replace_JST(s):
       time[3] += 9
     return (str(time[0]) + "/" + str(time[1]).zfill(2) + "/" + str(time[2]).zfill(2) + " " + str(time[3]).zfill(2) + ":" + str(time[4]).zfill(2))
 
-@tasks.loop(minutes=60)
+@tasks.loop(minutes=30)
 async def get_information():
     tmp = copy.copy(broadcast_data)
     now_time = datetime.now() + timedelta(hours=9)
@@ -265,8 +265,12 @@ async def get_information():
     aaa = requests.get(api_link)
     v_data = json.loads(aaa.text)
     for item in v_data['items']:#各配信予定動画データに関して
-        if(item['snippet']['channelId'] in idList):
-            broadcast_data[item['id']['videoId']] = {'channelId':item['snippet']['channelId']} #channelIDを格納
+        try:
+            if(item['snippet']['channelId'] in idList):
+                broadcast_data[item['id']['videoId']] = {'channelId':item['snippet']['channelId']} #channelIDを格納
+        except KeyError:
+            continue
+        
     for video in broadcast_data:
         try:
             a = broadcast_data[video]['starttime'] #既にbroadcast_dataにstarttimeがあるかチェック
