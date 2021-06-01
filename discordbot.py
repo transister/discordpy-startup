@@ -296,7 +296,7 @@ async def check_schedule():
         try:
             sd_time = datetime.strptime(broadcast_data[bd]['starttime'], '%Y-%m-%dT%H:%M:%SZ') #配信スタート時間をdatetime型で保管
             sd_time += timedelta(hours=9)
-            if((sd_time + timedelta(minutes=3)) >= now_time >= sd_time):#今の方が配信開始時刻よりも後だったら
+            if((sd_time + timedelta(minutes=1)) >= now_time >= sd_time):#今の方が配信開始時刻よりも後だったら
                 post_to_discord(broadcast_data[bd]['channelId'], bd) #ツイート
         except KeyError:
             continue
