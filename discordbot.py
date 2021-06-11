@@ -221,12 +221,55 @@ Streamer = {
         "774inc",
         "【シュガリリ】"
     ],
+    "UC2GuoutVyegg6PUK88lLpjw": [
+        "兄者弟者",
+        "https://yt3.ggpht.com/ytc/AAUvwniy1ARFkKvn9C681YgHkjsPjuPxrkYshOGvEZ7D_A=s88-c-k-c0x00ffffff-no-rj",
+        "DBD",
+        "DBD"
+    ],
+    "UCpXHIKytmA2RIHpDF3rp9EA": [
+        "べるくら企画",
+        "https://yt3.ggpht.com/ytc/AAUvwngKckKiJXKa0Zcur2AfNK87SmfnyjEjKn_H8Ogvww=s88-c-k-c0x00ffffff-no-rj",
+        "DBD",
+        "DBD"
+    ],
+    "UCDn8Lqf-x0zD8hmFUg08f6w": [
+        "狩野英孝【公式チャンネル】EIKO!GO!!",
+        "https://yt3.ggpht.com/ytc/AAUvwnhNDtCn0kpzANQ89q9UDFL04ytW32eYXodrysaI=s88-c-k-c0x00ffffff-no-rj",
+        "DBD",
+        "DBD"
+    ],
+    "UCz0aC9z3kXruRHULDqFRuVA": [
+        "あっさりしょこ",
+        "https://yt3.ggpht.com/ytc/AAUvwniV_ALSL7vMEX9wgVI4Je2KWb3jtntzi94iNyWPGQ=s88-c-k-c0x00ffffff-no-rj",
+        "DBD",
+        "DBD"
+    ],
+    "UCY5M1FeR1BQNsnumsJA1epA": [
+        "れぷちん",
+        "https://yt3.ggpht.com/ytc/AAUvwnhEhvtgRPYbyulaH2SKyVYTdMcsPYlECaRCIGL3Zg=s88-c-k-c0x00ffffff-no-rj",
+        "DBD",
+        "DBD"
+    ],
+    "UCH4fJJRV2UzgEpurjm9AiGw": [
+        "柚子木しろ",
+        "https://yt3.ggpht.com/ytc/AAUvwnhQkyw5DWx_1hZoHrQVF73SscIZKmfUJRVVwIXljQ=s88-c-k-c0x00ffffff-no-rj",
+        "DBD",
+        "DBD"
+    ],
+    "UC0VoI57B2_63MErt_1QBpxA": [
+        "EXAM",
+        "https://yt3.ggpht.com/ytc/AAUvwngTAeWz5Hw53R8yVMIm3cc5XBygvo4qGtu6B0O6hw=s88-c-k-c0x00ffffff-no-rj",
+        "DBD",
+        "DBD"
+    ],
 } #配信者のチャンネルID, 配信者名, アイコン画像のURLのリスト
 webhook_url = "https://discord.com/api/webhooks/814627315048906802/mast3_S-vt3V0R_fwVhzgrKmWD3H4fYAD9XZQiTuSWKFEupE2aRou24yWiYM6Jtksdjd" #配信開始
 webhook_url_yotei = {"Hololive": ['https://discord.com/api/webhooks/814626994296979456/IisxTTZqQXTvM569Z4TVFYSEqdxEriwt_M9XX_IEEiDsNNqG991tyZr94VOOfjAsBpeJ'],
                      "VOMS": ['https://discord.com/api/webhooks/838761972651655208/Kf3CGJ4ILSOgnQSm-gSEvtck2-Ug7clLCoQNr5HANyELXjxgffAseMr_j9qjiMxmvi0S'],
                      "Animale": ['https://discord.com/api/webhooks/839456091549073478/7EOanYAZaCsDWiiBTpqoOaTsmMg6VwhdCXpAvIs-GFWmEv5aqrGsg5v2mdNwqRbuLndu'],
-                     "774inc": ['https://discord.com/api/webhooks/839456401164075019/647cX72CzfwUQA1YoYAE4plZ-pzHLftVSjr3N2Ap_rauabzqRjFUD_wBH3fHeCBw3U6i']                     
+                     "774inc": ['https://discord.com/api/webhooks/839456401164075019/647cX72CzfwUQA1YoYAE4plZ-pzHLftVSjr3N2Ap_rauabzqRjFUD_wBH3fHeCBw3U6i'],
+                     "DBD": ['https://discord.com/api/webhooks/853051395140485120/LcdvLRUFrCEAMfUFeelxtlebhLJ4hXij4d994L3hB1CU0v2NazkjKZpr_lcP5zjUUdGK']                     
                     }#配信予定
 broadcast_data = {} #配信予定のデータを格納
 tmp = {}
