@@ -274,7 +274,7 @@ webhook_url_yotei = {"Hololive": ['https://discord.com/api/webhooks/814626994296
 broadcast_data = {} #配信予定のデータを格納
 tmp = {}
 
-YOUTUBE_API_KEY = ["AIzaSyCiWfz-dB0o-EbnT2YzKVFIzBk2E0nAdQU"]
+YOUTUBE_API_KEY = os.environ['YOUTUBE_APIKEY']
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -295,7 +295,6 @@ def replace_JST(s):
 async def get_information():
     tmp = copy.copy(broadcast_data)
     now_time = datetime.now() + timedelta(hours=9)
-    api_now = 0 #現在どのYouTube APIを使っているかを記録
     queryWord = "戌神ころね"
     queryWord_buf = "戌神ころね"
     idList = []
@@ -304,7 +303,7 @@ async def get_information():
             queryWord = queryWord + "|" + Streamer[idol][3]
             queryWord_buf = Streamer[idol][3]
         idList.append(idol)
-    api_link = "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id,snippet/title,snippet/channelId,snippet/publishedAt)&q=" + queryWord + "&key=" + YOUTUBE_API_KEY[0] + "&eventType=upcoming&type=video&maxResults=50"
+    api_link = "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id,snippet/title,snippet/channelId,snippet/publishedAt)&q=" + queryWord + "&key=" + YOUTUBE_API_KEY + "&eventType=upcoming&type=video&maxResults=50"
     aaa = requests.get(api_link)
     v_data = json.loads(aaa.text)
     for item in v_data['items']:#各配信予定動画データに関して
@@ -318,7 +317,7 @@ async def get_information():
         try:
             a = broadcast_data[video]['starttime'] #既にbroadcast_dataにstarttimeがあるかチェック
         except KeyError:#なかったら
-            aaaa = requests.get("https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&fields=items(liveStreamingDetails/scheduledStartTime)&id=" + video + "&key=" + YOUTUBE_API_KEY[0])
+            aaaa = requests.get("https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&fields=items(liveStreamingDetails/scheduledStartTime)&id=" + video + "&key=" + YOUTUBE_API_KEY)
             vd = json.loads(aaaa.text)
             broadcast_data[video]['starttime'] = vd['items'][0]['liveStreamingDetails']['scheduledStartTime']
     for vi in list(broadcast_data):
