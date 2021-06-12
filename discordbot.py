@@ -405,6 +405,12 @@ async def showTL():
             tweet_data[status.id] = {'text':status.text}
             tweet_data[status.id] = {'icon_url':status.author.profile_image_url}
             tweet_data[status.id] = {'name':status.author.name}
+            main_content = {    
+                    "username": tweet_data[tw]['name'],
+                    "avatar_url": tweet_data[tw]['icon_url'],
+                    "content": tweet_data[tw]['text']
+            }
+            requests.post(webhook_url, main_content)            
             #status.created_at += timedelta(hours=9) # add 9 hours for Japanese time
         for tw in list(tweet_data):
             if(not(tw in tweet_tmp)):
