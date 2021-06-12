@@ -412,14 +412,14 @@ async def showTL():
             }
             requests.post(webhook_url, main_content)            
             #status.created_at += timedelta(hours=9) # add 9 hours for Japanese time
-        for tw in list(tweet_data):
-            if(not(tw in tweet_tmp)):
-                main_content = {    
-                    "username": tweet_data[tw]['name'],
-                    "avatar_url": tweet_data[tw]['icon_url'],
-                    "content": tweet_data[tw]['text']
-                }
-                requests.post(webhook_url, main_content)
+        #for tw in list(tweet_data):
+        #    if(not(tw in tweet_tmp)):
+         #       main_content = {    
+        #            "username": tweet_data[tw]['name'],
+        #            "avatar_url": tweet_data[tw]['icon_url'],
+        #            "content": tweet_data[tw]['text']
+        #        }
+       #         requests.post(webhook_url, main_content)
             
     except Exception:
         time.sleep(1)
