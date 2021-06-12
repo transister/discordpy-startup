@@ -1,4 +1,5 @@
 
+
 from discord.ext import commands
 from discord.ext import tasks
 import tweepy
@@ -282,7 +283,14 @@ webhook_url_yotei = {"Hololive": ['https://discord.com/api/webhooks/815378597640
                      "774inc": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'],
                      "DBD": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j']                     
                     }#配信予定
-
+def get_oauth():
+    CONSUMER_KEY=os.environ['CONSUMER_KEY']
+    CONSUMER_SECRET=os.environ['CONSUMER_SECRET']
+    ACCESS_TOKEN_KEY=os.environ['ACCESS_TOKEN_KEY']
+    ACCESS_TOKEN_SECRET=os.environ['ACCESS_TOKEN_SECRET']
+    auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+    auth.set_access_token(ACCESS_TOKEN_KEY, ACCESS_TOKEN_SECRET)
+    return auth
 
 
 broadcast_data = {} #配信予定のデータを格納
@@ -290,6 +298,8 @@ tweet_data = {}
 tmp = {}
 
 YOUTUBE_API_KEY = os.environ['YOUTUBE_APIKEY']
+auth = get_oauth()
+tw_api = tweepy.API(auth_handler=auth)
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -306,14 +316,7 @@ def replace_JST(s):
       time[3] += 9
     return (str(time[0]) + "/" + str(time[1]).zfill(2) + "/" + str(time[2]).zfill(2) + " " + str(time[3]).zfill(2) + ":" + str(time[4]).zfill(2))
 
-def get_oauth():
-    CONSUMER_KEY=os.environ['CONSUMER_KEY']
-    CONSUMER_SECRET=os.environ['CONSUMER_SECRET']
-    ACCESS_TOKEN_KEY=os.environ['ACCESS_TOKEN_KEY']
-    ACCESS_TOKEN_SECRET=os.environ['ACCESS_TOKEN_SECRET']
-    auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
-    auth.set_access_token(ACCESS_TOKEN_KEY, ACCESS_TOKEN_SECRET)
-    return auth
+
 
 @tasks.loop(minutes=30)
 async def get_information():
@@ -392,10 +395,10 @@ def post_broadcast_schedule(userId, videoId, starttime):
     requests.post(webhook_url_yotei[Streamer[userId][2]][0], main_content) #Discordに送信
 
 @tasks.loop(seconds=60)
-async def showTL(api):
+async def showTL():
     tweet_tmp = copy.copy(tweet_data)
     try:
-        tl = api.list_timeline(list_id='1402758087744712708', count=10)
+        tl = tw_api.list_timeline(list_id='1402758087744712708', count=10)
         #tl = api.list_timeline(owner_screen_name='asuma_Noah', slug='774inc', count=10)
         tl.reverse()
         for status in tl:
@@ -424,10 +427,8 @@ async def on_ready():
     broadcast_data = {} #配信予定のデータを格納
     tweet_data = {}
     tmp = {}
-    auth = get_oauth()
-    tw_api = tweepy.API(auth_handler=auth)
     get_information.start()
-    showTL(tw_api)
+    showTL.start()
     time.sleep(60)
     check_schedule.start()
     
