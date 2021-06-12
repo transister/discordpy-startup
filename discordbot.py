@@ -393,7 +393,6 @@ def post_broadcast_schedule(userId, videoId, starttime):
 @tasks.loop(seconds=60)
 async def showTL(api):
     tweet_tmp = copy.copy(tweet_data)
-    tweet_data = {}
     try:
         tl = api.list_timeline(list_id='1402758087744712708', count=10)
         #tl = api.list_timeline(owner_screen_name='asuma_Noah', slug='774inc', count=10)
