@@ -406,7 +406,7 @@ async def showTL():
             tweet_data[status.id]['icon_url'] = status.author.profile_image_url
             tweet_data[status.id]['name'] = status.author.name
             #status.created_at += timedelta(hours=9) # add 9 hours for Japanese time
-            if(not(tweet_data[status.id] in tweet_tmp)):
+            if(not(tweet_data[status.id]['name'] in tweet_tmp)):
                 main_content = {    
                     "username": status.author.name, #配信者名
                     "avatar_url": status.author.profile_image_url, #アイコン
