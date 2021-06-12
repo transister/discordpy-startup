@@ -409,7 +409,7 @@ async def showTL():
             main_content = {    
                 "username": status.author.name, #配信者名
                 "avatar_url": status.author.profile_image_url, #アイコン
-                "content": status.user.text #文章
+                "content": status.text #文章
                 }
             requests.post(webhook_url, main_content)
         else:
