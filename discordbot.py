@@ -286,6 +286,7 @@ webhook_url_yotei = {"Hololive": ['https://discord.com/api/webhooks/815378597640
 
 
 broadcast_data = {} #配信予定のデータを格納
+tweet_data = {}
 tmp = {}
 
 YOUTUBE_API_KEY = os.environ['YOUTUBE_APIKEY']
@@ -402,13 +403,12 @@ async def showTL(api):
             tweet_data[status.id]['icon_url'] = status.profile_image_url
             tweet_data[status.id]['name'] = status.name
             #status.created_at += timedelta(hours=9) # add 9 hours for Japanese time
-            if(not(tweet_data[status.id] in tweet_tmp)):
-                main_content = {    
-                    "username": status.name, #配信者名
-                    "avatar_url": status.profile_image_url, #アイコン
-                    "content": status.text #文章
-                    }
-                requests.post(webhook_url, main_content)
+            main_content = {    
+                "username": status.name, #配信者名
+                "avatar_url": status.profile_image_url, #アイコン
+                "content": status.text #文章
+                }
+            requests.post(webhook_url, main_content)
         else:
             global lastSinceId
             lastSinceId = tl[-1].id
