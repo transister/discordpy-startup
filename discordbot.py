@@ -402,16 +402,17 @@ async def showTL():
         #tl = api.list_timeline(owner_screen_name='asuma_Noah', slug='774inc', count=10)
         tl.reverse()
         for status in tl:
-            #tweet_data[status.id]['text'] = status.text
-            #tweet_data[status.id]['icon_url'] = status.author.profile_image_url
-            #tweet_data[status.id]['name'] = status.author.name
+            tweet_data[status.id]['text'] = status.text
+            tweet_data[status.id]['icon_url'] = status.author.profile_image_url
+            tweet_data[status.id]['name'] = status.author.name
             #status.created_at += timedelta(hours=9) # add 9 hours for Japanese time
-            main_content = {    
-                "username": status.author.name, #配信者名
-                "avatar_url": status.author.profile_image_url, #アイコン
-                "content": status.text #文章
+            if(not(tweet_data[status.id] in tweet_tmp)):
+                main_content = {    
+                    "username": status.author.name, #配信者名
+                    "avatar_url": status.author.profile_image_url, #アイコン
+                    "content": status.text #文章
                 }
-            requests.post(webhook_url, main_content)
+                requests.post(webhook_url, main_content)
         else:
             global lastSinceId
             lastSinceId = tl[-1].id
