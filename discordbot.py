@@ -1,6 +1,7 @@
 
 from discord.ext import commands
 from discord.ext import tasks
+import tweepy
 import discord
 import os
 import traceback
@@ -9,6 +10,8 @@ import time
 import json
 import copy
 from datetime import datetime, timedelta, timezone
+import re
+import sys, codecs
 
 Streamer = {
     "UChAnqc_AY5_I3Px5dig3X1Q": [
@@ -264,13 +267,24 @@ Streamer = {
         "DBD"
     ],
 } #配信者のチャンネルID, 配信者名, アイコン画像のURLのリスト
-webhook_url = "https://discord.com/api/webhooks/814627315048906802/mast3_S-vt3V0R_fwVhzgrKmWD3H4fYAD9XZQiTuSWKFEupE2aRou24yWiYM6Jtksdjd" #配信開始
-webhook_url_yotei = {"Hololive": ['https://discord.com/api/webhooks/814626994296979456/IisxTTZqQXTvM569Z4TVFYSEqdxEriwt_M9XX_IEEiDsNNqG991tyZr94VOOfjAsBpeJ'],
-                     "VOMS": ['https://discord.com/api/webhooks/838761972651655208/Kf3CGJ4ILSOgnQSm-gSEvtck2-Ug7clLCoQNr5HANyELXjxgffAseMr_j9qjiMxmvi0S'],
-                     "Animale": ['https://discord.com/api/webhooks/839456091549073478/7EOanYAZaCsDWiiBTpqoOaTsmMg6VwhdCXpAvIs-GFWmEv5aqrGsg5v2mdNwqRbuLndu'],
-                     "774inc": ['https://discord.com/api/webhooks/839456401164075019/647cX72CzfwUQA1YoYAE4plZ-pzHLftVSjr3N2Ap_rauabzqRjFUD_wBH3fHeCBw3U6i'],
-                     "DBD": ['https://discord.com/api/webhooks/853051395140485120/LcdvLRUFrCEAMfUFeelxtlebhLJ4hXij4d994L3hB1CU0v2NazkjKZpr_lcP5zjUUdGK']                     
+#webhook_url = "https://discord.com/api/webhooks/814627315048906802/mast3_S-vt3V0R_fwVhzgrKmWD3H4fYAD9XZQiTuSWKFEupE2aRou24yWiYM6Jtksdjd" #配信開始
+#webhook_url_yotei = {"Hololive": ['https://discord.com/api/webhooks/814626994296979456/IisxTTZqQXTvM569Z4TVFYSEqdxEriwt_M9XX_IEEiDsNNqG991tyZr94VOOfjAsBpeJ'],
+#                    "VOMS": ['https://discord.com/api/webhooks/838761972651655208/Kf3CGJ4ILSOgnQSm-gSEvtck2-Ug7clLCoQNr5HANyELXjxgffAseMr_j9qjiMxmvi0S'],
+#                     "Animale": ['https://discord.com/api/webhooks/839456091549073478/7EOanYAZaCsDWiiBTpqoOaTsmMg6VwhdCXpAvIs-GFWmEv5aqrGsg5v2mdNwqRbuLndu'],
+#                     "774inc": ['https://discord.com/api/webhooks/839456401164075019/647cX72CzfwUQA1YoYAE4plZ-pzHLftVSjr3N2Ap_rauabzqRjFUD_wBH3fHeCBw3U6i'],
+#                     "DBD": ['https://discord.com/api/webhooks/853051395140485120/LcdvLRUFrCEAMfUFeelxtlebhLJ4hXij4d994L3hB1CU0v2NazkjKZpr_lcP5zjUUdGK']                     
+#                    }#配信予定
+
+webhook_url = "https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j" #配信開始
+webhook_url_yotei = {"Hololive": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'],
+                     "VOMS": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'],
+                     "Animale": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'],
+                     "774inc": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'],
+                     "DBD": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j']                     
                     }#配信予定
+
+
+
 broadcast_data = {} #配信予定のデータを格納
 tmp = {}
 
@@ -290,6 +304,15 @@ def replace_JST(s):
     else:
       time[3] += 9
     return (str(time[0]) + "/" + str(time[1]).zfill(2) + "/" + str(time[2]).zfill(2) + " " + str(time[3]).zfill(2) + ":" + str(time[4]).zfill(2))
+
+def get_oauth():
+    CONSUMER_KEY=os.environ['CONSUMER_KEY']
+    CONSUMER_SECRET=os.environ['CONSUMER_SECRET']
+    ACCESS_TOKEN_KEY=os.environ['ACCESS_TOKEN_KEY']
+    ACCESS_TOKEN_SECRET=os.environ['ACCESS_TOKEN_SECRET']
+    auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+    auth.set_access_token(ACCESS_TOKEN_KEY, ACCESS_TOKEN_SECRET)
+    return auth
 
 @tasks.loop(minutes=30)
 async def get_information():
@@ -366,15 +389,46 @@ def post_broadcast_schedule(userId, videoId, starttime):
         "content": content #文章
     }
     requests.post(webhook_url_yotei[Streamer[userId][2]][0], main_content) #Discordに送信
-    
+
+@tasks.loop(seconds=60)
+async def showTL(api):
+    tweet_tmp = copy.copy(tweet_data)
+    tweet_data = {}
+    try:
+        tl = api.list_timeline(list_id='1402758087744712708', count=10)
+        #tl = api.list_timeline(owner_screen_name='asuma_Noah', slug='774inc', count=10)
+        tl.reverse()
+        for status in tl:
+            tweet_data[status.id]['text'] = status.text
+            tweet_data[status.id]['icon_url'] = status.profile_image_url
+            tweet_data[status.id]['name'] = status.name
+            #status.created_at += timedelta(hours=9) # add 9 hours for Japanese time
+            if(not(tweet_data[status.id] in tweet_tmp)):
+                main_content = {    
+                    "username": status.name, #配信者名
+                    "avatar_url": status.profile_image_url, #アイコン
+                    "content": status.text #文章
+                    }
+                requests.post(webhook_url, main_content)
+        else:
+            global lastSinceId
+            lastSinceId = tl[-1].id
+            
+    except Exception:
+        time.sleep(1)
+        pass
 
 # 起動時に動作する処理
 @bot.event
 async def on_ready():
     # 起動したらターミナルにログイン通知が表示される
     broadcast_data = {} #配信予定のデータを格納
+    tweet_data = {}
     tmp = {}
+    auth = get_oauth()
+    tw_api = tweepy.API(auth_handler=auth)
     get_information.start()
+    showTL(tw_api)
     time.sleep(60)
     check_schedule.start()
     
@@ -390,7 +444,3 @@ async def ping(ctx):
 
 
 bot.run(token)
-
-
-
-
