@@ -403,13 +403,13 @@ async def showTL():
         tl.reverse()
         for status in tl:
             #tweet_data[status.id]['text'] = status.text
-            #tweet_data[status.id]['icon_url'] = status.profile_image_url
-            #tweet_data[status.id]['name'] = status.name
+            #tweet_data[status.id]['icon_url'] = status.author.profile_image_url
+            #tweet_data[status.id]['name'] = status.author.name
             #status.created_at += timedelta(hours=9) # add 9 hours for Japanese time
             main_content = {    
-                "username": status.name, #配信者名
-                "avatar_url": status.profile_image_url, #アイコン
-                "content": status.text #文章
+                "username": status.author.name, #配信者名
+                "avatar_url": status.author.profile_image_url, #アイコン
+                "content": status.user.text #文章
                 }
             requests.post(webhook_url, main_content)
         else:
@@ -427,10 +427,10 @@ async def on_ready():
     broadcast_data = {} #配信予定のデータを格納
     tweet_data = {}
     tmp = {}
-    get_information.start()
+    #get_information.start()
     showTL.start()
     time.sleep(60)
-    check_schedule.start()
+    #check_schedule.start()
     
 @bot.event
 async def on_command_error(ctx, error):
