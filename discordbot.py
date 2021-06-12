@@ -402,9 +402,9 @@ async def showTL():
         #tl = api.list_timeline(owner_screen_name='asuma_Noah', slug='774inc', count=10)
         tl.reverse()
         for status in tl:
-            tweet_data[status.id]['text'] = status.text
-            tweet_data[status.id]['icon_url'] = status.author.profile_image_url
-            tweet_data[status.id]['name'] = status.author.name
+            tweet_data[status.id] = {'text':status.text}
+            tweet_data[status.id] = {'icon_url':status.author.profile_image_url}
+            tweet_data[status.id] = {'name':status.author.name}
             #status.created_at += timedelta(hours=9) # add 9 hours for Japanese time
         for tw in list(tweet_data):
             if(not(tw in tweet_tmp)):
