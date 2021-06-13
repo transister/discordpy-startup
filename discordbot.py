@@ -403,7 +403,7 @@ async def showTL():
         #tl = api.list_timeline(owner_screen_name='asuma_Noah', slug='774inc', count=10)
         tl.reverse()
         for status in tl:
-            tweet_url = 'https://twitter.com/' + status.author.screen_name + '/status/' + status.id
+            tweet_url = 'https://twitter.com/' + status.author.screen_name + '/status/' + status.id_str
             tweet_data[status.id] = {'text':status.text + '\n' + tweet_url}
             tweet_data[status.id]['icon_url'] =status.author.profile_image_url
             tweet_data[status.id]['name'] = status.author.name
