@@ -283,6 +283,7 @@ webhook_url_yotei = {"Hololive": ['https://discord.com/api/webhooks/815378597640
                      "774inc": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'],
                      "DBD": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j']                     
                     }#配信予定
+webhook_url_tw = "https://discord.com/api/webhooks/853479874038595604/w_qUk4c_yx_8QDrd6uWKYsk6LYMyJug9rWsyDy7r6gyLRgQUCTRkKMB9qKY-mKTlS8uG"
 def get_oauth():
     CONSUMER_KEY=os.environ['CONSUMER_KEY']
     CONSUMER_SECRET=os.environ['CONSUMER_SECRET']
@@ -402,7 +403,7 @@ async def showTL():
         #tl = api.list_timeline(owner_screen_name='asuma_Noah', slug='774inc', count=10)
         tl.reverse()
         for status in tl:
-            tweet_data[status.id] = {'text':status.text}
+            tweet_data[status.id] = {'text':status.text+\n+'https://twitter.com/'+status.author.screen_name+'/status/'+status.id}
             tweet_data[status.id]['icon_url'] =status.author.profile_image_url
             tweet_data[status.id]['name'] = status.author.name
             #main_content = {    
