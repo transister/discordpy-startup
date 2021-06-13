@@ -268,23 +268,23 @@ Streamer = {
         "DBD"
     ],
 } #配信者のチャンネルID, 配信者名, アイコン画像のURLのリスト
-#webhook_url = "https://discord.com/api/webhooks/814627315048906802/mast3_S-vt3V0R_fwVhzgrKmWD3H4fYAD9XZQiTuSWKFEupE2aRou24yWiYM6Jtksdjd" #配信開始
-#webhook_url_yotei = {"Hololive": ['https://discord.com/api/webhooks/814626994296979456/IisxTTZqQXTvM569Z4TVFYSEqdxEriwt_M9XX_IEEiDsNNqG991tyZr94VOOfjAsBpeJ'],
-#                    "VOMS": ['https://discord.com/api/webhooks/838761972651655208/Kf3CGJ4ILSOgnQSm-gSEvtck2-Ug7clLCoQNr5HANyELXjxgffAseMr_j9qjiMxmvi0S'],
-#                     "Animale": ['https://discord.com/api/webhooks/839456091549073478/7EOanYAZaCsDWiiBTpqoOaTsmMg6VwhdCXpAvIs-GFWmEv5aqrGsg5v2mdNwqRbuLndu'],
-#                     "774inc": ['https://discord.com/api/webhooks/839456401164075019/647cX72CzfwUQA1YoYAE4plZ-pzHLftVSjr3N2Ap_rauabzqRjFUD_wBH3fHeCBw3U6i'],
-#                     "DBD": ['https://discord.com/api/webhooks/853051395140485120/LcdvLRUFrCEAMfUFeelxtlebhLJ4hXij4d994L3hB1CU0v2NazkjKZpr_lcP5zjUUdGK']                     
-#                    }#配信予定
-#webhook_url_tw = "https://discord.com/api/webhooks/853479874038595604/w_qUk4c_yx_8QDrd6uWKYsk6LYMyJug9rWsyDy7r6gyLRgQUCTRkKMB9qKY-mKTlS8uG"
-
-webhook_url = "https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j" #配信開始
-webhook_url_yotei = {"Hololive": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'],
-                     "VOMS": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'],
-                     "Animale": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'],
-                     "774inc": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'],
-                     "DBD": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j']                     
+webhook_url = "https://discord.com/api/webhooks/814627315048906802/mast3_S-vt3V0R_fwVhzgrKmWD3H4fYAD9XZQiTuSWKFEupE2aRou24yWiYM6Jtksdjd" #配信開始
+webhook_url_yotei = {"Hololive": ['https://discord.com/api/webhooks/814626994296979456/IisxTTZqQXTvM569Z4TVFYSEqdxEriwt_M9XX_IEEiDsNNqG991tyZr94VOOfjAsBpeJ'],
+                    "VOMS": ['https://discord.com/api/webhooks/838761972651655208/Kf3CGJ4ILSOgnQSm-gSEvtck2-Ug7clLCoQNr5HANyELXjxgffAseMr_j9qjiMxmvi0S'],
+                     "Animale": ['https://discord.com/api/webhooks/839456091549073478/7EOanYAZaCsDWiiBTpqoOaTsmMg6VwhdCXpAvIs-GFWmEv5aqrGsg5v2mdNwqRbuLndu'],
+                     "774inc": ['https://discord.com/api/webhooks/839456401164075019/647cX72CzfwUQA1YoYAE4plZ-pzHLftVSjr3N2Ap_rauabzqRjFUD_wBH3fHeCBw3U6i'],
+                     "DBD": ['https://discord.com/api/webhooks/853051395140485120/LcdvLRUFrCEAMfUFeelxtlebhLJ4hXij4d994L3hB1CU0v2NazkjKZpr_lcP5zjUUdGK']                     
                     }#配信予定
-webhook_url_tw = 'https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'
+webhook_url_tw = "https://discord.com/api/webhooks/853479874038595604/w_qUk4c_yx_8QDrd6uWKYsk6LYMyJug9rWsyDy7r6gyLRgQUCTRkKMB9qKY-mKTlS8uG"
+
+#webhook_url = "https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j" #配信開始
+#webhook_url_yotei = {"Hololive": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'],
+#                     "VOMS": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'],
+#                     "Animale": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'],
+#                     "774inc": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'],
+#                     "DBD": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j']                     
+#                    }#配信予定
+#webhook_url_tw = 'https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'
 def get_oauth():
     CONSUMER_KEY=os.environ['CONSUMER_KEY']
     CONSUMER_SECRET=os.environ['CONSUMER_SECRET']
@@ -405,7 +405,7 @@ async def showTL():
         tl.reverse()
         for status in tl:
             tweet_url = 'https://twitter.com/' + status.author.screen_name + '/status/' + status.id_str
-            tweet_data[status.id] = {'text':tweet_url}
+            tweet_data[status.id] = {'text':status.text + '\n' + tweet_url}
             tweet_data[status.id]['icon_url'] =status.author.profile_image_url
             tweet_data[status.id]['name'] = status.author.name
             #main_content = {    
