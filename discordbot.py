@@ -403,8 +403,8 @@ async def showTL():
         tl.reverse()
         for status in tl:
             tweet_data[status.id] = {'text':status.text}
-            tweet_data[status.id] = {'icon_url':status.author.profile_image_url}
-            tweet_data[status.id] = {'name':status.author.name}
+            tweet_data[status.id]['icon_url'] =status.author.profile_image_url
+            tweet_data[status.id]['name'] = status.author.name
             main_content = {    
                     "username": tweet_data[status.id]['name'],
                     "avatar_url": tweet_data[status.id]['icon_url'],
