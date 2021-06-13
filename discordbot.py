@@ -435,7 +435,7 @@ async def on_ready():
     broadcast_data = {} #配信予定のデータを格納
     tweet_data = {}
     tmp = {}
-    #get_information.start()
+    get_information.start()
     showTL.start()
     time.sleep(60)
     #check_schedule.start()
