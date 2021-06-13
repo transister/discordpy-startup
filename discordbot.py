@@ -275,6 +275,7 @@ Streamer = {
 #                     "774inc": ['https://discord.com/api/webhooks/839456401164075019/647cX72CzfwUQA1YoYAE4plZ-pzHLftVSjr3N2Ap_rauabzqRjFUD_wBH3fHeCBw3U6i'],
 #                     "DBD": ['https://discord.com/api/webhooks/853051395140485120/LcdvLRUFrCEAMfUFeelxtlebhLJ4hXij4d994L3hB1CU0v2NazkjKZpr_lcP5zjUUdGK']                     
 #                    }#配信予定
+#webhook_url_tw = "https://discord.com/api/webhooks/853479874038595604/w_qUk4c_yx_8QDrd6uWKYsk6LYMyJug9rWsyDy7r6gyLRgQUCTRkKMB9qKY-mKTlS8uG"
 
 webhook_url = "https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j" #配信開始
 webhook_url_yotei = {"Hololive": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'],
@@ -283,7 +284,7 @@ webhook_url_yotei = {"Hololive": ['https://discord.com/api/webhooks/815378597640
                      "774inc": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'],
                      "DBD": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j']                     
                     }#配信予定
-webhook_url_tw = "https://discord.com/api/webhooks/853479874038595604/w_qUk4c_yx_8QDrd6uWKYsk6LYMyJug9rWsyDy7r6gyLRgQUCTRkKMB9qKY-mKTlS8uG"
+webhook_url_tw = 'https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'
 def get_oauth():
     CONSUMER_KEY=os.environ['CONSUMER_KEY']
     CONSUMER_SECRET=os.environ['CONSUMER_SECRET']
@@ -404,7 +405,7 @@ async def showTL():
         tl.reverse()
         for status in tl:
             tweet_url = 'https://twitter.com/' + status.author.screen_name + '/status/' + status.id_str
-            tweet_data[status.id] = {'text':status.text + '\n' + tweet_url}
+            tweet_data[status.id] = {'text':tweet_url}
             tweet_data[status.id]['icon_url'] =status.author.profile_image_url
             tweet_data[status.id]['name'] = status.author.name
             #main_content = {    
@@ -421,7 +422,7 @@ async def showTL():
                     "avatar_url": tweet_data[tw]['icon_url'],
                     "content": tweet_data[tw]['text']
                 }
-                requests.post(webhook_url, main_content)
+                requests.post(webhook_url_tw, main_content)
             
     except Exception:
         time.sleep(1)
