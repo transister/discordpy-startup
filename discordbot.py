@@ -438,7 +438,7 @@ async def on_ready():
     get_information.start()
     showTL.start()
     time.sleep(60)
-    #check_schedule.start()
+    check_schedule.start()
     
 @bot.event
 async def on_command_error(ctx, error):
