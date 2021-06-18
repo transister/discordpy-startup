@@ -57,6 +57,12 @@ Streamer = {
         "Hololive",
         "大空スバル"
     ],
+    "UCt30jJgChL8qeT9VPadidSw": [
+        "しぐれうい",
+        "https://yt3.ggpht.com/ytc/AAUvwniuo8k4PtT6z_AsalVyQbz6BUpTebJVt22kZDw8Ig=s88-c-k-c0x00ffffff-no-rj",
+        "Hololive",
+        "しぐれうい"
+    ],
     "UCQ0UDLQCjY0rmuxCDE38FGg": [
         "夏色まつり",
         "https://yt3.ggpht.com/ytc/AAUvwni8cjtyc08E7rocvO9_gR1b5BhO1O6O1VreDxMW=s176-c-k-c0x00ffffff-no-rj",
@@ -267,6 +273,12 @@ Streamer = {
         "DBD",
         "DBD"
     ],
+    "UCaSgsFdGbwjfdawl3rOXiwQ": [
+        "DBD実況",
+        "https://yt3.ggpht.com/HXnVMt6rlRpBOdoekisviU5Ug0owXR-_EGhnBilQzUtPcz-4eXooMc8GBrapawiuTSBfmuGO8Kg=s88-c-k-c0x00ffffff-no-rj",
+        "DBD",
+        "DBD"
+    ],
 } #配信者のチャンネルID, 配信者名, アイコン画像のURLのリスト
 webhook_url = "https://discord.com/api/webhooks/814627315048906802/mast3_S-vt3V0R_fwVhzgrKmWD3H4fYAD9XZQiTuSWKFEupE2aRou24yWiYM6Jtksdjd" #配信開始
 webhook_url_yotei = {"Hololive": ['https://discord.com/api/webhooks/814626994296979456/IisxTTZqQXTvM569Z4TVFYSEqdxEriwt_M9XX_IEEiDsNNqG991tyZr94VOOfjAsBpeJ'],
@@ -339,6 +351,8 @@ async def get_information():
         try:
             if(item['snippet']['channelId'] in idList):
                 broadcast_data[item['id']['videoId']] = {'channelId':item['snippet']['channelId']} #channelIDを格納
+            if('dbd' in item['snippet']['title']):
+                broadcast_data[item['id']['videoId']] = {'channelId':"UCaSgsFdGbwjfdawl3rOXiwQ"} #channelIDを格納
         except KeyError:
             continue
         
