@@ -344,8 +344,8 @@ async def get_information():
     v_data = json.loads(aaa.text)
     api_link = "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id,snippet/title,snippet/channelId,snippet/publishedAt)&q=" + queryWord + "&key=" + YOUTUBE_API_KEY + "&eventType=live&type=video&maxResults=50"
     bbb = requests.get(api_link)
-    v_data = json.loads(bbb.text)
-    for item in v_data['items']:#各配信予定動画データに関して
+    v_data2 = json.loads(bbb.text)
+    for item in v_data2['items']:#各配信予定動画データに関して
         try:
             if(item['snippet']['channelId'] in idList):
                 broadcast_data[item['id']['videoId']] = {'channelId':item['snippet']['channelId']} #channelIDを格納
