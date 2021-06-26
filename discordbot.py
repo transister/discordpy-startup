@@ -350,16 +350,12 @@ async def get_information():
         try:
             if(item['snippet']['channelId'] in idList):
                 broadcast_data[item['id']['videoId']] = {'channelId':item['snippet']['channelId']} #channelIDを格納
-            if('dbd' in item['snippet']['title']):
-                broadcast_data[item['id']['videoId']] = {'channelId':"UCaSgsFdGbwjfdawl3rOXiwQ"} #channelIDを格納
         except KeyError:
             continue            
-    for item in v_data2['items']:#各配信予定動画データに関して
+    for item2 in v_data2['items']:#各配信予定動画データに関して
         try:
-            if(item['snippet']['channelId'] in idList):
-                broadcast_data[item['id']['videoId']] = {'channelId':item['snippet']['channelId']} #channelIDを格納
-            if('dbd' in item['snippet']['title']):
-                broadcast_data[item['id']['videoId']] = {'channelId':"UCaSgsFdGbwjfdawl3rOXiwQ"} #channelIDを格納
+            if(item2['snippet']['channelId'] in idList):
+                broadcast_data[item2['id']['videoId']] = {'channelId':item2['snippet']['channelId']} #channelIDを格納
         except KeyError:
             continue
         
