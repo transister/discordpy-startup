@@ -345,8 +345,16 @@ async def get_information():
     api_link = "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id,snippet/title,snippet/channelId,snippet/publishedAt)&q=" + queryWord + "&key=" + YOUTUBE_API_KEY + "&eventType=live&type=video&maxResults=50"
     bbb = requests.get(api_link)
     v_data2 = json.loads(bbb.text)
-    v_data.update(**v_data2)
+    #v_data.update(**v_data2)
     for item in v_data['items']:#各配信予定動画データに関して
+        try:
+            if(item['snippet']['channelId'] in idList):
+                broadcast_data[item['id']['videoId']] = {'channelId':item['snippet']['channelId']} #channelIDを格納
+            if('dbd' in item['snippet']['title']):
+                broadcast_data[item['id']['videoId']] = {'channelId':"UCaSgsFdGbwjfdawl3rOXiwQ"} #channelIDを格納
+        except KeyError:
+            continue            
+    for item in v_data2['items']:#各配信予定動画データに関して
         try:
             if(item['snippet']['channelId'] in idList):
                 broadcast_data[item['id']['videoId']] = {'channelId':item['snippet']['channelId']} #channelIDを格納
