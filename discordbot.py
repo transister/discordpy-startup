@@ -338,7 +338,7 @@ async def get_information():
             queryWord = queryWord + "|" + Streamer[idol][3]
             queryWord_buf = Streamer[idol][3]
         idList.append(idol)
-    api_link = "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id,snippet/title,snippet/channelId,snippet/publishedAt)&q=" + queryWord + "&key=" + YOUTUBE_API_KEY + "&eventType=upcoming&publishedAfter=" + (datetime.now() - timedelta(days=7)) + "&type=video&maxResults=50"
+    api_link = "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id,snippet/title,snippet/channelId,snippet/publishedAt)&q=" + queryWord + "&key=" + YOUTUBE_API_KEY + "&eventType=upcoming&publishedAfter=" + datetime.strptime(datetime.now() - timedelta(days=7), '%Y-%m-%dT%H:%M:%SZ') + "&type=video&maxResults=50"
     aaa = requests.get(api_link)
     #api_link2 = "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id,snippet/title,snippet/channelId,snippet/publishedAt)&q=" + queryWord + "&key=" + YOUTUBE_API_KEY + "&eventType=live&publishedAfter=" + (datetime.now() - timedelta(days=7)) + "&type=video&maxResults=50"
     #bbb = requests.get(api_link2)
