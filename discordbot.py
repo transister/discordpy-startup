@@ -235,43 +235,43 @@ Streamer = {
         "兄者弟者",
         "https://yt3.ggpht.com/ytc/AAUvwniy1ARFkKvn9C681YgHkjsPjuPxrkYshOGvEZ7D_A=s88-c-k-c0x00ffffff-no-rj",
         "DBD",
-        "兄者弟者"
+        "DBD"
     ],
     "UCpXHIKytmA2RIHpDF3rp9EA": [
         "べるくら企画",
         "https://yt3.ggpht.com/ytc/AAUvwngKckKiJXKa0Zcur2AfNK87SmfnyjEjKn_H8Ogvww=s88-c-k-c0x00ffffff-no-rj",
         "DBD",
-        "べるくら企画"
+        "DBD"
     ],
     "UCDn8Lqf-x0zD8hmFUg08f6w": [
         "狩野英孝【公式チャンネル】EIKO!GO!!",
         "https://yt3.ggpht.com/ytc/AAUvwnhNDtCn0kpzANQ89q9UDFL04ytW32eYXodrysaI=s88-c-k-c0x00ffffff-no-rj",
         "DBD",
-        "狩野英孝"
+        "DBD"
     ],
     "UCz0aC9z3kXruRHULDqFRuVA": [
         "あっさりしょこ",
         "https://yt3.ggpht.com/ytc/AAUvwniV_ALSL7vMEX9wgVI4Je2KWb3jtntzi94iNyWPGQ=s88-c-k-c0x00ffffff-no-rj",
         "DBD",
-        "あっさりしょこ"
+        "DBD"
     ],
     "UCY5M1FeR1BQNsnumsJA1epA": [
         "れぷちん",
         "https://yt3.ggpht.com/ytc/AAUvwnhEhvtgRPYbyulaH2SKyVYTdMcsPYlECaRCIGL3Zg=s88-c-k-c0x00ffffff-no-rj",
         "DBD",
-        "れぷちん"
+        "DBD"
     ],
     "UCH4fJJRV2UzgEpurjm9AiGw": [
         "柚子木しろ",
         "https://yt3.ggpht.com/ytc/AAUvwnhQkyw5DWx_1hZoHrQVF73SscIZKmfUJRVVwIXljQ=s88-c-k-c0x00ffffff-no-rj",
         "DBD",
-        "柚子木しろ"
+        "DBD"
     ],
     "UC0VoI57B2_63MErt_1QBpxA": [
         "EXAM",
         "https://yt3.ggpht.com/ytc/AAUvwngTAeWz5Hw53R8yVMIm3cc5XBygvo4qGtu6B0O6hw=s88-c-k-c0x00ffffff-no-rj",
         "DBD",
-        "EXAM"
+        "DBD"
     ],
 } #配信者のチャンネルID, 配信者名, アイコン画像のURLのリスト
 webhook_url = "https://discord.com/api/webhooks/814627315048906802/mast3_S-vt3V0R_fwVhzgrKmWD3H4fYAD9XZQiTuSWKFEupE2aRou24yWiYM6Jtksdjd" #配信開始
