@@ -273,12 +273,6 @@ Streamer = {
         "DBD",
         "EXAM"
     ],
-    "UCaSgsFdGbwjfdawl3rOXiwQ": [
-        "DBD実況",
-        "https://yt3.ggpht.com/HXnVMt6rlRpBOdoekisviU5Ug0owXR-_EGhnBilQzUtPcz-4eXooMc8GBrapawiuTSBfmuGO8Kg=s88-c-k-c0x00ffffff-no-rj",
-        "DBD",
-        "DBD"
-    ],
 } #配信者のチャンネルID, 配信者名, アイコン画像のURLのリスト
 webhook_url = "https://discord.com/api/webhooks/814627315048906802/mast3_S-vt3V0R_fwVhzgrKmWD3H4fYAD9XZQiTuSWKFEupE2aRou24yWiYM6Jtksdjd" #配信開始
 webhook_url_yotei = {"Hololive": ['https://discord.com/api/webhooks/814626994296979456/IisxTTZqQXTvM569Z4TVFYSEqdxEriwt_M9XX_IEEiDsNNqG991tyZr94VOOfjAsBpeJ'],
