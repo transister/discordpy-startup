@@ -339,7 +339,7 @@ async def get_information():
             queryWord_buf = Streamer[idol][3]
         idList.append(idol)
     dtct_time = datetime.strptime((now_time - timedelta(hours=24)), '%Y-%m-%dT%H:%M:%SZ')
-    api_link = "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id,snippet/title,snippet/channelId,snippet/publishedAt)&q=" + queryWord + "&key=" + YOUTUBE_API_KEY + "&eventType=upcoming&publishedAfter=2021-06-19T00:00:00Z&type=video&maxResults=50"
+    api_link = "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id,snippet/title,snippet/channelId,snippet/publishedAt)&q=" + queryWord + "&key=" + YOUTUBE_API_KEY + "&eventType=upcoming&type=video&publishedAfter=2021-06-19T00:00:00Z&maxResults=50"
     aaa = requests.get(api_link)
     #api_link2 = "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id,snippet/title,snippet/channelId,snippet/publishedAt)&q=" + queryWord + "&key=" + YOUTUBE_API_KEY + "&eventType=live&publishedAfter=" + (datetime.now() - timedelta(days=7)) + "&type=video&maxResults=50"
     #bbb = requests.get(api_link2)
@@ -380,7 +380,7 @@ async def check_schedule():
             sd_time = datetime.strptime(broadcast_data[bd]['starttime'], '%Y-%m-%dT%H:%M:%SZ') #配信スタート時間をdatetime型で保管
             sd_time += timedelta(hours=9)
             if((sd_time + timedelta(minutes=1)) >= now_time >= sd_time):#今の方が配信開始時刻よりも後だったら
-                post_to_discord(broadcast_data[bd]['channelId'], bd) #ツイート
+                post_to_discord(broadcast_data[bd]['channelId'], bd) 
         except KeyError:
             continue
 
@@ -434,7 +434,7 @@ async def showTL():
                     "avatar_url": tweet_data[tw]['icon_url'],
                     "content": tweet_data[tw]['text']
                 }
-                requests.post(webhook_url_tw, main_content)
+                requests.post(webhook_url_tw, main_content)#ツイート
             
     except Exception:
         time.sleep(1)
