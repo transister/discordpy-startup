@@ -338,13 +338,13 @@ async def get_information():
             queryWord = queryWord + "|" + Streamer[idol][3]
             queryWord_buf = Streamer[idol][3]
         idList.append(idol)
-    dtct_time = now_time - timedelta(hours=24)
+    dtct_time = now_time - timedelta(days=7)
     api_link = "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id,snippet/title,snippet/channelId,snippet/publishedAt)&q=" + queryWord + "&key=" + YOUTUBE_API_KEY + "&eventType=upcoming&type=video&maxResults=50&" + dtct_time.strftime('%Y-%m-%dT%H:%M:%SZ')
     aaa = requests.get(api_link)
-    #api_link2 = "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id,snippet/title,snippet/channelId,snippet/publishedAt)&q=" + queryWord + "&key=" + YOUTUBE_API_KEY + "&eventType=live&publishedAfter=" + (datetime.now() - timedelta(days=7)) + "&type=video&maxResults=50"
-    #bbb = requests.get(api_link2)
     v_data = json.loads(aaa.text)
-    #v_data.update(json.loads(bbb.text))
+    api_link = "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id,snippet/title,snippet/channelId,snippet/publishedAt)&q=" + queryWord + "&key=" + YOUTUBE_API_KEY + "&eventType=live&type=video&maxResults=50&" + dtct_time.strftime('%Y-%m-%dT%H:%M:%SZ')
+    aaa = requests.get(api_link)
+    v_data.update(json.loads(aaa.text))
     for item in v_data['items']:#各配信予定動画データに関して
         try:
             if(item['snippet']['channelId'] in idList):
