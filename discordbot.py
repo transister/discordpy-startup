@@ -346,19 +346,27 @@ async def get_information():
     bbb = requests.get(api_link)
     v_data2 = json.loads(bbb.text)
     #v_data.update(**v_data2)
-    for item in v_data['items']:#各配信予定動画データに関して
-        try:
-            if(item['snippet']['channelId'] in idList):
-                broadcast_data[item['id']['videoId']] = {'channelId':item['snippet']['channelId']} #channelIDを格納
-        except KeyError:
-            continue            
-    for item2 in v_data2['items']:#各配信予定動画データに関して
-        try:
-            if(item2['snippet']['channelId'] in idList):
-                if (broadcast_data[item2['id']['videoId']] is None):
-                    broadcast_data[item2['id']['videoId']] = {'channelId':item2['snippet']['channelId']} #channelIDを格納
-        except KeyError:
-            continue
+    
+    try:
+        for item in v_data['items']:#各配信予定動画データに関して
+            try:
+                if(item['snippet']['channelId'] in idList):
+                    broadcast_data[item['id']['videoId']] = {'channelId':item['snippet']['channelId']} #channelIDを格納
+            except KeyError:
+                continue
+    except KeyError:
+        pass
+    
+    try:
+        for item2 in v_data2['items']:#各配信予定動画データに関して
+            try:
+                if(item2['snippet']['channelId'] in idList):
+                    if (broadcast_data[item2['id']['videoId']] is None):
+                        broadcast_data[item2['id']['videoId']] = {'channelId':item2['snippet']['channelId']} #channelIDを格納
+            except KeyError:
+                continue
+    except KeyError:
+        pass
         
     for video in broadcast_data:
         try:
