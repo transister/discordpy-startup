@@ -349,7 +349,7 @@ async def get_information():
     
     try:
         c = v_data['error']
-    except:
+    except KeyError:
         for item in v_data['items']:#各配信予定動画データに関して
             try:
                 if(item['snippet']['channelId'] in idList):
@@ -358,7 +358,7 @@ async def get_information():
                 continue
     try:
         cc = v_data2['error']
-    except:
+    except KeyError:
         for item2 in v_data2['items']:#各配信予定動画データに関して
             try:
                 if(item2['snippet']['channelId'] in idList):
