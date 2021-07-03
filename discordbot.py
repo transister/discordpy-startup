@@ -235,37 +235,37 @@ Streamer = {
         "兄者弟者",
         "https://yt3.ggpht.com/ytc/AAUvwniy1ARFkKvn9C681YgHkjsPjuPxrkYshOGvEZ7D_A=s88-c-k-c0x00ffffff-no-rj",
         "DBD",
-        "兄者弟者"
+        "DBD"
     ],
     "UCpXHIKytmA2RIHpDF3rp9EA": [
         "べるくら企画",
         "https://yt3.ggpht.com/ytc/AAUvwngKckKiJXKa0Zcur2AfNK87SmfnyjEjKn_H8Ogvww=s88-c-k-c0x00ffffff-no-rj",
         "DBD",
-        "べるくら企画"
+        "DBD"
     ],
     "UCDn8Lqf-x0zD8hmFUg08f6w": [
         "狩野英孝【公式チャンネル】EIKO!GO!!",
         "https://yt3.ggpht.com/ytc/AAUvwnhNDtCn0kpzANQ89q9UDFL04ytW32eYXodrysaI=s88-c-k-c0x00ffffff-no-rj",
         "DBD",
-        "狩野英孝"
+        "DBD"
     ],
     "UCz0aC9z3kXruRHULDqFRuVA": [
         "あっさりしょこ",
         "https://yt3.ggpht.com/ytc/AAUvwniV_ALSL7vMEX9wgVI4Je2KWb3jtntzi94iNyWPGQ=s88-c-k-c0x00ffffff-no-rj",
         "DBD",
-        "あっさりしょこ"
+        "DBD"
     ],
     "UCY5M1FeR1BQNsnumsJA1epA": [
         "れぷちん",
         "https://yt3.ggpht.com/ytc/AAUvwnhEhvtgRPYbyulaH2SKyVYTdMcsPYlECaRCIGL3Zg=s88-c-k-c0x00ffffff-no-rj",
         "DBD",
-        "れぷちん"
+        "DBD"
     ],
     "UC0VoI57B2_63MErt_1QBpxA": [
         "EXAM",
         "https://yt3.ggpht.com/ytc/AAUvwngTAeWz5Hw53R8yVMIm3cc5XBygvo4qGtu6B0O6hw=s88-c-k-c0x00ffffff-no-rj",
         "DBD",
-        "EXAM"
+        "DBD"
     ],
     "UCH4fJJRV2UzgEpurjm9AiGw": [
         "柚子木しろ",
@@ -283,14 +283,14 @@ webhook_url_yotei = {"Hololive": ['https://discord.com/api/webhooks/814626994296
                     }#配信予定
 webhook_url_tw = "https://discord.com/api/webhooks/853479874038595604/w_qUk4c_yx_8QDrd6uWKYsk6LYMyJug9rWsyDy7r6gyLRgQUCTRkKMB9qKY-mKTlS8uG"
 
-#webhook_url = "https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j" #配信開始
-#webhook_url_yotei = {"Hololive": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'],
-#                     "VOMS": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'],
-#                     "Animale": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'],
-#                     "774inc": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'],
-#                     "DBD": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j']                     
-#                    }#配信予定
-#webhook_url_tw = 'https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'
+webhook_url = "https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j" #配信開始
+webhook_url_yotei = {"Hololive": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'],
+                     "VOMS": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'],
+                     "Animale": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'],
+                     "774inc": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'],
+                     "DBD": ['https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j']                     
+                    }#配信予定
+webhook_url_tw = 'https://discord.com/api/webhooks/815378597640273950/n4lBhc1Xeh7NHD7YuEocX_Vwxg4tKml5tsZSV10eshXmUu_OCHJuce1ft77GJ_cvUt3j'
 def get_oauth():
     CONSUMER_KEY=os.environ['CONSUMER_KEY']
     CONSUMER_SECRET=os.environ['CONSUMER_SECRET']
