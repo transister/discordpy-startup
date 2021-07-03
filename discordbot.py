@@ -326,7 +326,7 @@ def replace_JST(s):
 
 
 
-@tasks.loop(minutes=0)
+@tasks.loop(minutes=60)
 async def get_information():
     tmp = copy.copy(broadcast_data)
     now_time = datetime.now() + timedelta(hours=9)
