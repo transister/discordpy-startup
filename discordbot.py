@@ -354,6 +354,9 @@ async def get_information():
                     broadcast_data[item['id']['videoId']] = {'channelId':item['snippet']['channelId']} #channelIDを格納
             except KeyError:
                 continue
+    except:
+        pass
+    try:
         for item2 in v_data2['items']:#各配信予定動画データに関して
             try:
                 if(item2['snippet']['channelId'] in idList):
