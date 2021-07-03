@@ -326,7 +326,7 @@ def replace_JST(s):
 
 
 
-@tasks.loop(minutes=30)
+@tasks.loop(minutes=0)
 async def get_information():
     tmp = copy.copy(broadcast_data)
     now_time = datetime.now() + timedelta(hours=9)
@@ -354,10 +354,6 @@ async def get_information():
                     broadcast_data[item['id']['videoId']] = {'channelId':item['snippet']['channelId']} #channelIDを格納
             except KeyError:
                 continue
-    except KeyError:
-        pass
-    
-    try:
         for item2 in v_data2['items']:#各配信予定動画データに関して
             try:
                 if(item2['snippet']['channelId'] in idList):
@@ -365,7 +361,7 @@ async def get_information():
                         broadcast_data[item2['id']['videoId']] = {'channelId':item2['snippet']['channelId']} #channelIDを格納
             except KeyError:
                 continue
-    except KeyError:
+    except:
         pass
         
     for video in broadcast_data:
